@@ -41,7 +41,7 @@
         }
         
         .visual-option-card.is-active {
-            filter: brightness(1.08) saturate(1.05); /* Jauh lebih terang dan pop out! */
+            filter: brightness(1.15) saturate(1.05); /* Jauh lebih cerah, kontras, dan stand out! */
             opacity: 1;
             border-color: #B57873; 
             background-color: #FFF;
@@ -49,24 +49,25 @@
             transform: translateY(-3px);
         }
 
-        /* CSS Cropping Windows menggunakan file tunggal */
+        /* CSS Window Cropping Engine */
         .nail-crop {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        /* Penyesuaian koordinat fokus berdasarkan gambar referensi */
+        
+        /* Koordinat presisi membidik gambar kuku contoh */
         .crop-short    { object-position: 12% 5%; transform: scale(1.6); }
         .crop-medium   { object-position: 38% 5%; transform: scale(1.6); }
         .crop-long     { object-position: 63% 5%; transform: scale(1.5); }
-        .crop-xl       { object-position: 63% 5%; transform: scale(1.8); } /* Fokus ke XL Square */
+        .crop-xl       { object-position: 63% 5%; transform: scale(1.8); }
         
         .crop-square   { object-position: 38% 5%; transform: scale(1.6); }
         .crop-oval     { object-position: 88% 5%; transform: scale(1.6); }
         .crop-almond   { object-position: 15% 95%; transform: scale(1.6); }
         .crop-coffin   { object-position: 13% 50%; transform: scale(1.6); }
         .crop-stiletto { object-position: 50% 95%; transform: scale(1.6); }
-        .crop-custom   { object-position: 50% 50%; transform: scale(1.6); } /* Fokus ke Ballerina */
+        .crop-custom   { object-position: 50% 50%; transform: scale(1.6); } 
 
         input[type="range"] {
             -webkit-appearance: none;
@@ -139,7 +140,7 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Short" class="nail-crop crop-short">
+                            <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Short" class="nail-crop crop-short">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Coquette Short</span>
@@ -150,7 +151,7 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Medium" class="nail-crop crop-medium">
+                            <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Medium" class="nail-crop crop-medium">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Court Medium</span>
@@ -161,7 +162,7 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Long" class="nail-crop crop-long">
+                            <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Long" class="nail-crop crop-long">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Royal Long</span>
@@ -172,7 +173,7 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="XL" class="nail-crop crop-xl">
+                            <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="XL" class="nail-crop crop-xl">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Baroque XL</span>
@@ -196,24 +197,24 @@
                             <!-- Square -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Square" class="nail-crop crop-square">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Square" class="nail-crop crop-square">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Square</span>
                             </label>
                             <!-- Oval -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Oval" class="nail-crop crop-oval">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Oval" class="nail-crop crop-oval">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Oval</span>
                             </label>
                             <!-- Almond -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Almond" class="nail-crop crop-almond">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Almond" class="nail-crop crop-almond">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Almond</span>
                             </label>
@@ -226,24 +227,24 @@
                             <!-- Coffin -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Coffin" class="nail-crop crop-coffin">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Coffin" class="nail-crop crop-coffin">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Coffin</span>
                             </label>
                             <!-- Stiletto -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Stiletto" class="nail-crop crop-stiletto">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Stiletto" class="nail-crop crop-stiletto">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Stiletto</span>
                             </label>
-                            <!-- Ballerina/Custom -->
+                            <!-- Ballerina -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
-                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Ballerina" class="nail-crop crop-custom">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Ballerina" class="nail-crop crop-custom">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Ballerina</span>
                             </label>
@@ -325,7 +326,8 @@
     </div>
 
     <script>
-        const WHATSAPP_NUMBER = "6281234567890"; 
+        // Menggunakan nomor WhatsApp terdaftar milikmu
+        const WHATSAPP_NUMBER = "6281331118565"; 
         let hasImage = false;
 
         function handleFileChange(input) {
