@@ -41,7 +41,7 @@
         }
         
         .visual-option-card.is-active {
-            filter: brightness(1.15) saturate(1.05); /* Jauh lebih cerah, kontras, dan stand out! */
+            filter: brightness(1.15) saturate(1.05); 
             opacity: 1;
             border-color: #B57873; 
             background-color: #FFF;
@@ -56,7 +56,6 @@
             object-fit: cover;
         }
         
-        /* Koordinat presisi membidik gambar kuku contoh */
         .crop-short    { object-position: 12% 5%; transform: scale(1.6); }
         .crop-medium   { object-position: 38% 5%; transform: scale(1.6); }
         .crop-long     { object-position: 63% 5%; transform: scale(1.5); }
@@ -99,9 +98,17 @@
         </h1>
         <div class="script-coquette text-4xl text-[#B57873] -mt-1 mb-2">Collection</div>
         <div class="w-12 h-[1px] bg-[#C0AF99] mx-auto my-3"></div>
-        <p class="text-stone-500 text-[10px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed">
+        <p class="text-stone-500 text-[10px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed mb-6">
             Bespoke Custom Coquette Press-On Lab
         </p>
+
+        <!-- DOWNLOAD PDF CATALOG BUTTON -->
+        <a href="nail_shapes_catalog.pdf" download="nail_shapes_catalog.pdf" class="inline-flex items-center gap-2 px-4 py-2 border border-[#B57873] text-[#B57873] text-[11px] font-medium tracking-wider uppercase rounded-xl hover:bg-[#B57873] hover:text-white transition-all duration-300 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
+            </svg>
+            Download Shape Catalog (PDF)
+        </a>
     </header>
 
     <main class="max-w-xl mx-auto px-4 pb-44">
@@ -136,7 +143,6 @@
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Length Tier</h2>
                 </div>
                 <div class="grid grid-cols-2 gap-3" id="lengthGroup">
-                    <!-- Short -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
@@ -147,7 +153,6 @@
                             <span class="mono-data text-[9px] text-[#B57873] font-bold">Base Spec</span>
                         </div>
                     </label>
-                    <!-- Medium -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
@@ -158,7 +163,6 @@
                             <span class="mono-data text-[9px] text-stone-500 font-bold">+10k IDR</span>
                         </div>
                     </label>
-                    <!-- Long -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
@@ -169,7 +173,6 @@
                             <span class="mono-data text-[9px] text-stone-500 font-bold">+20k IDR</span>
                         </div>
                     </label>
-                    <!-- XL -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
@@ -194,7 +197,6 @@
                     <div>
                         <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Classic Shapes</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <!-- Square -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -202,7 +204,6 @@
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Square</span>
                             </label>
-                            <!-- Oval -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -210,7 +211,6 @@
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Oval</span>
                             </label>
-                            <!-- Almond -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -224,7 +224,6 @@
                     <div>
                         <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Avant-Garde Shapes (+10k)</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <!-- Coffin -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -232,7 +231,6 @@
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Coffin</span>
                             </label>
-                            <!-- Stiletto -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -240,7 +238,6 @@
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Stiletto</span>
                             </label>
-                            <!-- Ballerina -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="syncVisualOptions()">
                                 <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
@@ -256,7 +253,7 @@
             <!-- SECTION 4: ART ELEVATION -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">IV.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Delicate Hand-Paint</h2>
                 </div>
                 <div class="space-y-3 py-1">
@@ -326,7 +323,6 @@
     </div>
 
     <script>
-        // Menggunakan nomor WhatsApp terdaftar milikmu
         const WHATSAPP_NUMBER = "6281331118565"; 
         let hasImage = false;
 
