@@ -111,33 +111,11 @@
 
     <main class="max-w-xl mx-auto px-4 pb-44">
         <div class="rococo-card p-6 md:p-8 space-y-10 rounded-3xl">
-            
-            <!-- SECTION 1: VISUAL BLUEPRINT -->
-            <div class="space-y-4">
-                <div class="flex items-baseline justify-between border-b border-stone-200 pb-2">
-                    <div class="flex items-baseline gap-2">
-                        <span class="heading-rococo text-xl italic text-[#B57873]">I.</span>
-                        <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Visual Inspo</h2>
-                    </div>
-                    <span class="mono-data text-[9px] text-[#B57873] font-bold tracking-wider">OPTIONAL</span>
-                </div>
-                <div class="flex items-center justify-center w-full">
-                    <label class="flex flex-col items-center justify-center w-full h-24 border border-dashed border-[#C0AF99] bg-white hover:bg-[#CFB4AB]/10 transition-colors cursor-pointer rounded-2xl">
-                        <div class="flex flex-col items-center justify-center text-center px-4">
-                            <svg class="w-5 h-5 mb-1 text-[#B57873]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
-                            </svg>
-                            <p class="heading-rococo text-xs italic text-stone-700" id="uploadStatus">Attach custom design portrait or inspirations</p>
-                        </div>
-                        <input type="file" id="nailPhoto" accept="image/*" class="hidden" onchange="handleFileChange(this)">
-                    </label>
-                </div>
-            </div>
 
-            <!-- SECTION 2: LENGTH COUTURE -->
+            <!-- SECTION 1: LENGTH COUTURE -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">II.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">I.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Length Tier</h2>
                 </div>
                 <div class="grid grid-cols-2 gap-3" id="lengthGroup">
@@ -184,10 +162,10 @@
                 </div>
             </div>
 
-            <!-- SECTION 3: SILHOUETTE PROFILE -->
+            <!-- SECTION 2: SILHOUETTE PROFILE -->
             <div class="space-y-6">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">III.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">II.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Shape Profiles</h2>
                 </div>
                 
@@ -248,10 +226,10 @@
                 </div>
             </div>
 
-            <!-- SECTION 4: ART ELEVATION -->
+            <!-- SECTION 3: ART ELEVATION -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">IV.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">III.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Delicate Hand-Paint</h2>
                 </div>
                 <div class="space-y-3 py-1">
@@ -276,10 +254,10 @@
                 </div>
             </div>
 
-            <!-- SECTION 5: EMBELLISHMENTS -->
+            <!-- SECTION 4: EMBELLISHMENTS -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">IV.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Palace Jewelry</h2>
                 </div>
                 <div class="space-y-3 py-1">
@@ -304,10 +282,10 @@
                 </div>
             </div>
 
-            <!-- SECTION 6: ADHESIVE SELECTION (NEW) -->
+            <!-- SECTION 5: ADHESIVE SELECTION -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">VI.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Nail Adhesive</h2>
                 </div>
                 <div class="grid grid-cols-1 gap-3" id="glueGroup">
@@ -358,17 +336,6 @@
 
     <script>
         const WHATSAPP_NUMBER = "6281331118565"; 
-        let hasImage = false;
-
-        function handleFileChange(input) {
-            const statusText = document.getElementById('uploadStatus');
-            if(input.files && input.files[0]) {
-                statusText.innerText = "✓ Archive Portrait Recorded";
-                statusText.classList.remove('text-stone-700');
-                statusText.classList.add('text-rose-900', 'font-semibold');
-                hasImage = true;
-            }
-        }
 
         function syncVisualOptions() {
             const containerIds = ['lengthGroup', 'shapeGroup', 'glueGroup'];
@@ -387,7 +354,7 @@
 
             // Live engine: Update preview heights inside Shape Profiles selection based on chosen Length Tier
             const currentLength = document.querySelector('input[name="length"]:checked').value;
-            let targetHeight = "50px"; // Default Short
+            let targetHeight = "50px"; 
             
             if (currentLength === "Medium") targetHeight = "62px";
             else if (currentLength === "Long") targetHeight = "74px";
@@ -432,35 +399,33 @@
         }
 
         function sendToWhatsApp() {
-    const length = document.querySelector('input[name="length"]:checked').value;
-    const shape = document.querySelector('input[name="shape"]:checked').value;
-    const glue = document.querySelector('input[name="glue"]:checked').value;
-    const artLine = document.getElementById('artLine').value;
-    const artChrome = document.getElementById('artChrome').value;
-    const accCharm = document.getElementById('accCharm').value;
-    const accStone = document.getElementById('accStone').value;
-    const total = document.getElementById('floatingPriceDisplay').innerText;
-    
-    // Jika ada gambar, ingatkan pelanggan untuk melampirkannya secara manual di WA
-    const fotoStatus = hasImage ? "Ada (Mohon lampirkan fotonya kembali setelah pesan ini terkirim 🙏)" : "Tidak Ada";
+            const length = document.querySelector('input[name="length"]:checked').value;
+            const shape = document.querySelector('input[name="shape"]:checked').value;
+            const glue = document.querySelector('input[name="glue"]:checked').value;
+            const artLine = document.getElementById('artLine').value;
+            const artChrome = document.getElementById('artChrome').value;
+            const accCharm = document.getElementById('accCharm').value;
+            const accStone = document.getElementById('accStone').value;
+            const total = document.getElementById('floatingPriceDisplay').innerText;
 
-    const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
-                        `• Length Model: ${length}\n` +
-                        `• Silhouette Contour: ${shape}\n` +
-                        `• Nail Adhesive: ${glue} (Free)\n` +
-                        `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
-                        `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
-                        `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
-                        `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n` +
-                        `• Boudoir Portrait: ${fotoStatus}\n\n` +
-                        `*ESTIMATED VALUATION:* ${total}\n\n` +
-                        `Bespoke royal alignment initiated via Effortless Collection.`;
+            const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
+                                `• Length Model: ${length}\n` +
+                                `• Silhouette Contour: ${shape}\n` +
+                                `• Nail Adhesive: ${glue} (Free)\n` +
+                                `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
+                                `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
+                                `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
+                                `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n\n` +
+                                `*ESTIMATED VALUATION:* ${total}\n\n` +
+                                `Bespoke royal alignment initiated via Effortless Collection.\n\n` +
+                                `📌 *Catatan:* Jika ada gambar/inspo referensi kustom, silakan dikirim setelah teks ini ya! ✨`;
 
-    const encodedMessage = encodeURIComponent(textMessage);
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    
-    window.open(waUrl, '_blank');
-}
+            const encodedMessage = encodeURIComponent(textMessage);
+            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+            
+            window.open(waUrl, '_blank');
+        }
+
         syncVisualOptions();
     </script>
 </body>
