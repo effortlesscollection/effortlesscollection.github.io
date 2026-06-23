@@ -146,7 +146,6 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="Light-lavender-nails-with-blooming-flower-accents.jpg" alt="Short" class="nail-crop crop-short">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Coquette Short</span>
@@ -156,7 +155,6 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="346632411_588195899954225_4787512647991951745_n-557aa6bdac824c078afadb152218f5a9" alt="Medium" class="nail-crop crop-medium">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Court Medium</span>
@@ -166,7 +164,6 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="dsoU9RjiPZ4ZC5PAlDxRhowGmeCCDrNoGrbwrR5o" alt="Long" class="nail-crop crop-long">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Royal Long</span>
@@ -176,7 +173,6 @@
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
                         <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
-                            <img src="s-l400" alt="XL" class="nail-crop crop-xl">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Baroque XL</span>
@@ -313,11 +309,11 @@
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] via-[#FAF6F0]/90 to-transparent z-50">
         <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
             <div>
-                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// BOUDOIR VALUE</p>
+                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// TOTAL VALUE</p>
                 <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 75.000</p>
             </div>
             <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo rounded-xl shadow-md">
-                Secure Spec
+                ORDER SPEC
             </button>
         </div>
     </div>
@@ -395,7 +391,7 @@
             const total = document.getElementById('floatingPriceDisplay').innerText;
             const fotoStatus = hasImage ? "Uploaded & Awaiting Curation" : "None";
 
-            const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
+            const textMessage = ` EFFORTLESS COLLECTION — EVELATE ORDER \n\n` +
                                 `• Length Model: ${length}\n` +
                                 `• Silhouette Contour: ${shape}\n` +
                                 `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
@@ -404,6 +400,7 @@
                                 `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n` +
                                 `• Boudoir Portrait: ${fotoStatus}\n\n` +
                                 `*ESTIMATED VALUATION:* ${total}\n\n` +
+                                `Thank you for your order.`;
                                 `Bespoke royal alignment initiated via Effortless Collection.`;
 
             const encodedMessage = encodeURIComponent(textMessage);
