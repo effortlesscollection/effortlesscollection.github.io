@@ -6,72 +6,90 @@
     <title>Effortless Collection — Custom Press-On Atelier</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts Multi-Mix (Cormorant Garamond + Outfit + Space Mono) -->
+    <!-- Google Fonts Multi-Mix (Playfair Display untuk aksen klasik & Tenor Sans untuk minimalis mewah) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Tenor+Sans&family=Space+Mono&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Outfit', sans-serif;
-            background-color: #080f1d; /* Rich Midnight Navy Canvas */
+            font-family: 'Tenor Sans', sans-serif;
+            background-color: #f7f4ee; /* Warm Creme Wall Paint dari download (2).jpg */
+            color: #0d1b2a; /* Deep Midnight Navy text */
         }
         .heading-classic {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Playfair Display', serif;
         }
         .mono-data {
             font-family: 'Space Mono', monospace;
         }
-        /* Neo-Classic Studio Aesthetics */
-        .atelier-card {
-            background-color: #fcfbfa; /* Warm Ivory/Creme Page */
-            border: 1px solid #eadecc;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        /* Arched Architecture style inspired by download (2).jpg */
+        .classic-arch-card {
+            background-color: #ffffff;
+            border: 1px solid #e1dacb;
+            box-shadow: 0 10px 30px rgba(13, 27, 42, 0.04);
         }
-        /* Sophisticated custom scrollbar / sliders */
+        /* Custom range slider mimicking antique hardware */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #e1dacb;
+            height: 2px;
+        }
         input[type="range"]::-webkit-slider-thumb {
-            background: #080f1d;
-            border: 2px solid #eadecc;
-            border-radius: 0px;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #0d1b2a;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.3);
         }
     </style>
 </head>
-<body class="text-slate-300 antialiased selection:bg-neutral-800 selection:text-white">
+<body class="antialiased selection:bg-[#0d1b2a] selection:text-white">
 
-    <!-- Header Section -->
-    <header class="w-full text-center py-20 px-4 max-w-xl mx-auto">
-        <div class="mono-data inline-flex items-center gap-2 text-[#eadecc] text-[10px] font-medium tracking-[0.2em] uppercase mb-4">
-            — ATELIER SPECIFICATION SHEET —
+    <!-- Header Section (Inspired by Classical European Archways) -->
+    <header class="w-full text-center pt-24 pb-16 px-4 max-w-xl mx-auto border-b border-[#e1dacb]">
+        <div class="mono-data inline-flex items-center gap-2 text-[#a89a7e] text-[10px] font-bold tracking-[0.25em] uppercase mb-4">
+            • BESPOKE NAIL ATELIER •
         </div>
-        <h1 class="heading-classic text-5xl md:text-6xl font-light italic text-[#fcfbfa] leading-none mb-4 tracking-wide">
-            Effortless <br><span class="font-normal not-italic tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#eadecc] to-[#f4f1ea]">COLLECTION</span>
+        <!-- Elegant Serif Logo Type -->
+        <h1 class="heading-classic text-5xl font-normal text-[#0d1b2a] leading-none mb-3 tracking-wide">
+            Effortless
         </h1>
-        <p class="text-slate-400 text-xs max-w-xs mx-auto font-light tracking-widest uppercase leading-relaxed border-t border-b border-slate-800 py-3 mt-4">
-            Bespoke Press-On Architecture & Valuations
+        <div class="text-xs italic tracking-[0.3em] uppercase text-[#a89a7e] font-light heading-classic mb-4">— COLLECTION —</div>
+        <p class="text-slate-500 text-xs max-w-xs mx-auto font-light tracking-wide leading-relaxed mt-2">
+            Formulasikan arsitektur presisi kuku Anda. Disusun secara eksklusif dengan kurasi estetika klasik yang abadi.
         </p>
     </header>
 
     <!-- Main Container -->
-    <main class="max-w-xl mx-auto px-4 pb-44">
-        <!-- Elegant Ivory Gallery Box -->
-        <div class="atelier-card rounded-none p-8 md:p-10 space-y-12 text-neutral-900">
+    <main class="max-w-xl mx-auto px-4 pb-44 pt-12">
+        <!-- Main Form Container -->
+        <div class="classic-arch-card p-8 md:p-10 space-y-12">
             
             <!-- SECTION 1: VISUAL BLUEPRINT -->
             <div class="space-y-4">
                 <div class="flex items-baseline justify-between border-b border-neutral-200 pb-2">
                     <div class="flex items-baseline gap-3">
-                        <span class="heading-classic text-2xl italic text-neutral-400">I.</span>
-                        <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Visual Blueprint</h2>
+                        <span class="heading-classic text-xl italic text-[#a89a7e]">I.</span>
+                        <h2 class="heading-classic font-normal text-lg tracking-wide uppercase text-[#0d1b2a]">Visual Blueprint</h2>
                     </div>
-                    <span class="mono-data text-[9px] text-neutral-400 tracking-wider">OPTIONAL</span>
+                    <span class="mono-data text-[9px] text-slate-400 tracking-wider">OPTIONAL</span>
                 </div>
                 <div class="flex items-center justify-center w-full">
-                    <label class="flex flex-col items-center justify-center w-full h-32 border border-neutral-300 bg-[#faf9f6] cursor-pointer hover:bg-neutral-50 transition-colors rounded-none">
+                    <label class="flex flex-col items-center justify-center w-full h-32 border border-dashed border-[#e1dacb] bg-[#faf8f5] cursor-pointer hover:bg-[#f3f0e8] transition-colors">
                         <div class="flex flex-col items-center justify-center text-center px-4">
-                            <svg class="w-5 h-5 mb-2 text-neutral-400 font-light" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+                            <!-- Minimalist Fine-line Icon -->
+                            <svg class="w-5 h-5 mb-2 text-slate-400 font-light" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                             </svg>
-                            <p class="heading-classic text-sm italic text-neutral-800" id="uploadStatus">Upload reference rendering</p>
+                            <p class="heading-classic text-sm italic text-slate-700" id="uploadStatus">Unggah referensi lukisan / rendering desain</p>
                         </div>
                         <input type="file" id="nailPhoto" accept="image/*" class="hidden" onchange="handleFileChange(this)">
                     </label>
@@ -81,29 +99,30 @@
             <!-- SECTION 2: LENGTH COUTURE -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
-                    <span class="heading-classic text-2xl italic text-neutral-400">II.</span>
-                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Length Specification</h2>
+                    <span class="heading-classic text-xl italic text-[#a89a7e]">II.</span>
+                    <h2 class="heading-classic font-normal text-lg tracking-wide uppercase text-[#0d1b2a]">Length Specification</h2>
                 </div>
+                <!-- Clean, symmetrical grid like classic window frames -->
                 <div class="grid grid-cols-2 gap-4">
-                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
+                    <label class="relative flex flex-col p-4 bg-[#faf8f5] border border-[#e1dacb] cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-white">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-classic font-normal text-lg text-neutral-900">Classic Short</span>
-                        <span class="mono-data text-[10px] text-neutral-400 mt-1">Complimentary Base</span>
+                        <span class="heading-classic font-normal text-base text-[#0d1b2a]">Classic Short</span>
+                        <span class="mono-data text-[9px] text-slate-400 mt-1">Complimentary Base</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
+                    <label class="relative flex flex-col p-4 bg-[#faf8f5] border border-[#e1dacb] cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-white">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-classic font-normal text-lg text-neutral-900">Demi Medium</span>
-                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+10,000 IDR</span>
+                        <span class="heading-classic font-normal text-base text-[#0d1b2a]">Demi Medium</span>
+                        <span class="mono-data text-[9px] text-slate-600 mt-1">+10,000 IDR</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
+                    <label class="relative flex flex-col p-4 bg-[#faf8f5] border border-[#e1dacb] cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-white">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-classic font-normal text-lg text-neutral-900">Elegant Long</span>
-                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+20,000 IDR</span>
+                        <span class="heading-classic font-normal text-base text-[#0d1b2a]">Elegant Long</span>
+                        <span class="mono-data text-[9px] text-slate-600 mt-1">+20,000 IDR</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
+                    <label class="relative flex flex-col p-4 bg-[#faf8f5] border border-[#e1dacb] cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-white">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-classic font-normal text-lg text-neutral-900">Sculpted XL</span>
-                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+30,000 IDR</span>
+                        <span class="heading-classic font-normal text-base text-[#0d1b2a]">Sculpted XL</span>
+                        <span class="mono-data text-[9px] text-slate-600 mt-1">+30,000 IDR</span>
                     </label>
                 </div>
             </div>
@@ -111,43 +130,43 @@
             <!-- SECTION 3: SILHOUETTE PROFILE -->
             <div class="space-y-6">
                 <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
-                    <span class="heading-classic text-2xl italic text-neutral-400">III.</span>
-                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Silhouette Profiling</h2>
+                    <span class="heading-classic text-xl italic text-[#a89a7e]">III.</span>
+                    <h2 class="heading-classic font-normal text-lg tracking-wide uppercase text-[#0d1b2a]">Silhouette Profiling</h2>
                 </div>
                 
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div>
-                        <p class="mono-data text-[10px] text-neutral-400 uppercase tracking-[0.15em] mb-3">Essential Profiles</p>
-                        <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                        <p class="mono-data text-[9px] text-slate-400 uppercase tracking-[0.2em] mb-3">Essential Profiles</p>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Square</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Square</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Oval</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Oval</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Almond</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Almond</span>
                             </label>
                         </div>
                     </div>
 
                     <div>
-                        <p class="mono-data text-[10px] text-neutral-400 uppercase tracking-[0.15em] mb-3">Avant-Garde Profiles (+10k)</p>
-                        <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                        <p class="mono-data text-[9px] text-slate-400 uppercase tracking-[0.2em] mb-3">Avant-Garde Profiles (+10k)</p>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Coffin</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Coffin</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Stiletto</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Stiletto</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-[#0d1b2a] transition has-[:checked]:border-[#0d1b2a] has-[:checked]:bg-[#faf8f5]">
                                 <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Asymmetric</span>
+                                <span class="font-normal text-xs text-slate-700 tracking-wider">Asymmetric</span>
                             </label>
                         </div>
                     </div>
@@ -157,74 +176,74 @@
             <!-- SECTION 4: ART ELEVATION -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
-                    <span class="heading-classic text-2xl italic text-neutral-400">IV.</span>
-                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Bespoke Line Artistry</h2>
+                    <span class="heading-classic text-xl italic text-[#a89a7e]">IV.</span>
+                    <h2 class="heading-classic font-normal text-lg tracking-wide uppercase text-[#0d1b2a]">Bespoke Line Artistry</h2>
                 </div>
 
-                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                <div class="space-y-3 py-2">
                     <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Fine Line / Swirl Architecture / Aura Bleed</span>
-                            <span class="heading-classic italic text-[11px] text-neutral-400">Precision hand-painted structural accents</span>
+                            <span class="text-xs font-normal tracking-wide text-[#0d1b2a] block">Fine Line / Swirl Architecture / Aura Bleed</span>
+                            <span class="heading-classic italic text-[11px] text-slate-400">Precision hand-painted structural accents</span>
                         </div>
-                        <span id="art1Display" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
+                        <span id="art1Display" class="heading-classic text-lg italic text-[#0d1b2a] border-b border-[#0d1b2a] px-1">0</span>
                     </div>
-                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
+                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
 
-                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                <div class="space-y-3 py-2">
                     <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Liquid Metallic / Cat-Eye Radiance</span>
-                            <span class="heading-classic italic text-[11px] text-neutral-400">Reflective fine-metal layer treatment</span>
+                            <span class="text-xs font-normal tracking-wide text-[#0d1b2a] block">Liquid Metallic / Cat-Eye Radiance</span>
+                            <span class="heading-classic italic text-[11px] text-slate-400">Reflective fine-metal layer treatment</span>
                         </div>
-                        <span id="art2Display" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
+                        <span id="art2Display" class="heading-classic text-lg italic text-[#0d1b2a] border-b border-[#0d1b2a] px-1">0</span>
                     </div>
-                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
+                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
             </div>
 
             <!-- SECTION 5: EMBELLISHMENTS -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
-                    <span class="heading-classic text-2xl italic text-neutral-400">V.</span>
-                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Atelier Embellishments</h2>
+                    <span class="heading-classic text-xl italic text-[#a89a7e]">V.</span>
+                    <h2 class="heading-classic font-normal text-lg tracking-wide uppercase text-[#0d1b2a]">Atelier Embellishments</h2>
                 </div>
 
-                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                <div class="space-y-3 py-2">
                     <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">3D Relic Sculpting / Neo-Classic Charms</span>
-                            <span class="heading-classic italic text-[11px] text-neutral-400">Structural luxury miniature hardware</span>
+                            <span class="text-xs font-normal tracking-wide text-[#0d1b2a] block">3D Relic Sculpting / Neo-Classic Charms</span>
+                            <span class="heading-classic italic text-[11px] text-slate-400">Structural luxury miniature hardware</span>
                         </div>
-                        <span id="charmDisplay" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
+                        <span id="charmDisplay" class="heading-classic text-lg italic text-[#0d1b2a] border-b border-[#0d1b2a] px-1">0</span>
                     </div>
-                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
+                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
 
-                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                <div class="space-y-3 py-2">
                     <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Raw Crystals / Mineral Studs</span>
-                            <span class="heading-classic italic text-[11px] text-neutral-400">Asymmetric glass element balancing</span>
+                            <span class="text-xs font-normal tracking-wide text-[#0d1b2a] block">Raw Crystals / Mineral Studs</span>
+                            <span class="heading-classic italic text-[11px] text-slate-400">Asymmetric glass element balancing</span>
                         </div>
-                        <span id="stoneDisplay" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
+                        <span id="stoneDisplay" class="heading-classic text-lg italic text-[#0d1b2a] border-b border-[#0d1b2a] px-1">0</span>
                     </div>
-                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
+                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- FLOATING CHECKOUT HUD (Midnight Navy Palette Contrast) -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#080f1d] via-[#080f1d]/90 to-transparent z-50">
-        <div class="max-w-md mx-auto bg-[#080f1d] border border-slate-800 text-white rounded-none p-5 shadow-2xl flex items-center justify-between gap-4">
+    <!-- FLOATING CHECKOUT HUD (Contrast Navy & Ivory Theme) -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#f7f4ee] via-[#f7f4ee]/90 to-transparent z-50">
+        <div class="max-w-md mx-auto bg-[#0d1b2a] text-[#f7f4ee] p-5 shadow-2xl flex items-center justify-between gap-4 border border-[#1e2d3b]">
             <div>
-                <p class="mono-data text-[9px] tracking-[0.2em] text-[#eadecc] uppercase">// ATELIER VALUE</p>
-                <p id="floatingPriceDisplay" class="heading-classic text-2xl font-normal text-[#fcfbfa] tracking-wide">Rp 75.000</p>
+                <p class="mono-data text-[8px] tracking-[0.25em] text-[#a89a7e] uppercase">// ATELIER VALUE</p>
+                <p id="floatingPriceDisplay" class="heading-classic text-2xl font-normal text-white tracking-wide">Rp 75.000</p>
             </div>
-            <button type="button" onclick="sendToWhatsApp()" class="bg-[#fcfbfa] hover:bg-neutral-100 text-neutral-950 font-medium px-6 py-3.5 rounded-none text-xs tracking-[0.15em] uppercase transition-colors heading-classic">
+            <button type="button" onclick="sendToWhatsApp()" class="bg-[#f7f4ee] hover:bg-[#eadecc] text-[#0d1b2a] font-normal px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-classic font-semibold">
                 Submit Order
             </button>
         </div>
@@ -239,7 +258,7 @@
             const statusText = document.getElementById('uploadStatus');
             if(input.files && input.files[0]) {
                 statusText.innerText = "✓ Blueprint Recorded";
-                statusText.classList.remove('text-neutral-800');
+                statusText.classList.remove('text-slate-700');
                 statusText.classList.add('text-emerald-700', 'font-medium');
                 hasImage = true;
             }
