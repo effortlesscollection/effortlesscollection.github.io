@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Effortless Collection — Glowing Coquette Atelier</title>
+    <title>Effortless Collection — ELEVATE YOUR EVERYDAY</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts Multi-Mix -->
@@ -14,18 +14,12 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #FAF6F0; /* Bright Ivory Linen Base */
+            background-color: #FAF6F0; 
             color: #2D2522; 
         }
-        .heading-rococo {
-            font-family: 'Playfair Display', serif;
-        }
-        .script-coquette {
-            font-family: 'Italianno', cursive;
-        }
-        .mono-data {
-            font-family: 'Space Mono', monospace;
-        }
+        .heading-rococo { font-family: 'Playfair Display', serif; }
+        .script-coquette { font-family: 'Italianno', cursive; }
+        .mono-data { font-family: 'Space Mono', monospace; }
         
         .rococo-card {
             background-color: #FCF8F5; 
@@ -33,40 +27,52 @@
             box-shadow: 0 20px 40px rgba(181, 120, 115, 0.06);
         }
 
-        /* Option Item Pop Effect */
         .visual-option-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            filter: brightness(0.92); 
-            opacity: 0.7;
+            opacity: 0.75;
         }
         
         .visual-option-card.is-active {
-            filter: brightness(1.15) saturate(1.05); 
             opacity: 1;
             border-color: #B57873; 
             background-color: #FFF;
-            box-shadow: 0 10px 25px rgba(181, 120, 115, 0.15);
+            box-shadow: 0 10px 25px rgba(181, 120, 115, 0.12);
             transform: translateY(-3px);
         }
 
-        /* CSS Window Cropping Engine */
-        .nail-crop {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        /* Pure CSS Nail Engine - No Images Needed! */
+        .nail-model {
+            width: 34px;
+            height: 70px;
+            background: linear-gradient(135deg, #FADCD5 0%, #F5C6BC 50%, #E8B0A5 100%);
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 2px 4px 10px rgba(45, 37, 34, 0.12), inset -2px -2px 4px rgba(255,255,255,0.4);
+            transition: transform 0.3s ease, height 0.3s ease;
         }
-        
-        .crop-short    { object-position: 12% 5%; transform: scale(1.6); }
-        .crop-medium   { object-position: 38% 5%; transform: scale(1.6); }
-        .crop-long     { object-position: 63% 5%; transform: scale(1.5); }
-        .crop-xl       { object-position: 63% 5%; transform: scale(1.8); }
-        
-        .crop-square   { object-position: 38% 5%; transform: scale(1.6); }
-        .crop-oval     { object-position: 88% 5%; transform: scale(1.6); }
-        .crop-almond   { object-position: 15% 95%; transform: scale(1.6); }
-        .crop-coffin   { object-position: 13% 50%; transform: scale(1.6); }
-        .crop-stiletto { object-position: 50% 95%; transform: scale(1.6); }
-        .crop-custom   { object-position: 50% 50%; transform: scale(1.6); } 
+
+        /* 3D Coquette Reflection Highlight */
+        .nail-model::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 70%;
+            background: rgba(255, 255, 255, 0.4);
+            left: 5px;
+            top: 15%;
+            border-radius: 2px;
+            filter: blur(0.5px);
+        }
+
+        /* Precise CSS Architecture Shapes */
+        .shape-square { border-radius: 0 0 12px 12px; }
+        .shape-oval { border-radius: 16px 16px 12px 12px; }
+        .shape-almond { border-radius: 50% 50% 12px 12px / 75% 75% 12px 12px; }
+        .shape-coffin { clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
+        .shape-stiletto { clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
+        .shape-ballerina { clip-path: polygon(28% 0%, 72% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
 
         input[type="range"] {
             -webkit-appearance: none;
@@ -89,7 +95,7 @@
 </head>
 <body class="antialiased selection:bg-[#B57873] selection:text-white">
 
-    <header class="w-full text-center pt-16 pb-10 px-4 max-w-xl mx-auto">
+    <header class="w-full text-center pt-16 pb-12 px-4 max-w-xl mx-auto">
         <div class="mono-data inline-flex items-center gap-2 text-[#B57873] text-[10px] font-bold tracking-[0.3em] uppercase mb-2">
             ✨ ELEVATE YOUR EVERYDAY ✨
         </div>
@@ -98,17 +104,9 @@
         </h1>
         <div class="script-coquette text-4xl text-[#B57873] -mt-1 mb-2">Collection</div>
         <div class="w-12 h-[1px] bg-[#C0AF99] mx-auto my-3"></div>
-        <p class="text-stone-500 text-[10px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed mb-6">
-            Custom and Ready to Wear Press-on Nails
+        <p class="text-stone-500 text-[10px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed">
+            Custom and Ready to wear Press-on Nail
         </p>
-
-        <!-- DOWNLOAD PDF CATALOG BUTTON -->
-        <a href="nail_shapes_catalog.pdf" download="nail_shapes_catalog.pdf" class="inline-flex items-center gap-2 px-4 py-2 border border-[#B57873] text-[#B57873] text-[11px] font-medium tracking-wider uppercase rounded-xl hover:bg-[#B57873] hover:text-white transition-all duration-300 shadow-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
-            </svg>
-            Download Shape Catalog (PDF)
-        </a>
     </header>
 
     <main class="max-w-xl mx-auto px-4 pb-44">
@@ -124,12 +122,12 @@
                     <span class="mono-data text-[9px] text-[#B57873] font-bold tracking-wider">OPTIONAL</span>
                 </div>
                 <div class="flex items-center justify-center w-full">
-                    <label class="flex flex-col items-center justify-center w-full h-28 border border-dashed border-[#C0AF99] bg-white hover:bg-[#CFB4AB]/10 transition-colors cursor-pointer rounded-2xl">
+                    <label class="flex flex-col items-center justify-center w-full h-24 border border-dashed border-[#C0AF99] bg-white hover:bg-[#CFB4AB]/10 transition-colors cursor-pointer rounded-2xl">
                         <div class="flex flex-col items-center justify-center text-center px-4">
-                            <svg class="w-5 h-5 mb-1.5 text-[#B57873]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mb-1 text-[#B57873]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
-                            <p class="heading-rococo text-xs italic text-stone-700" id="uploadStatus">Show your custom design portrait or inspirations</p>
+                            <p class="heading-rococo text-xs italic text-stone-700" id="uploadStatus">Attach custom design portrait or inspirations</p>
                         </div>
                         <input type="file" id="nailPhoto" accept="image/*" class="hidden" onchange="handleFileChange(this)">
                     </label>
@@ -145,36 +143,40 @@
                 <div class="grid grid-cols-2 gap-3" id="lengthGroup">
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                        <div class="w-full h-24 bg-[#FAF1EC] rounded-xl overflow-hidden mb-2 relative">
+                            <div class="nail-model shape-oval" style="height: 50px;"></div>
                         </div>
-                        <div class="px-1 py-1">
+                        <div class="px-1 py-0.5">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Coquette Short</span>
                             <span class="mono-data text-[9px] text-[#B57873] font-bold">Base Spec</span>
                         </div>
                     </label>
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                        <div class="w-full h-24 bg-[#FAF1EC] rounded-xl overflow-hidden mb-2 relative">
+                            <div class="nail-model shape-oval" style="height: 62px;"></div>
                         </div>
-                        <div class="px-1 py-1">
+                        <div class="px-1 py-0.5">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Court Medium</span>
                             <span class="mono-data text-[9px] text-stone-500 font-bold">+10k IDR</span>
                         </div>
                     </label>
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                        <div class="w-full h-24 bg-[#FAF1EC] rounded-xl overflow-hidden mb-2 relative">
+                            <div class="nail-model shape-oval" style="height: 74px;"></div>
                         </div>
-                        <div class="px-1 py-1">
+                        <div class="px-1 py-0.5">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Royal Long</span>
                             <span class="mono-data text-[9px] text-stone-500 font-bold">+20k IDR</span>
                         </div>
                     </label>
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                        <div class="w-full h-24 bg-[#FAF1EC] rounded-xl overflow-hidden mb-2 relative">
+                            <div class="nail-model shape-oval" style="height: 86px;"></div>
                         </div>
-                        <div class="px-1 py-1">
+                        <div class="px-1 py-0.5">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Baroque XL</span>
                             <span class="mono-data text-[9px] text-stone-500 font-bold">+30k IDR</span>
                         </div>
@@ -186,31 +188,31 @@
             <div class="space-y-6">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">III.</span>
-                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Silhouette Profiles</h2>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Shape Profiles</h2>
                 </div>
                 
                 <div class="space-y-6" id="shapeGroup">
                     <div>
                         <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Classic Shapes</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Square" class="nail-crop crop-square">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-square data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Square</span>
                             </label>
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Oval" class="nail-crop crop-oval">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-oval data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Oval</span>
                             </label>
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Almond" class="nail-crop crop-almond">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-almond data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Almond</span>
                             </label>
@@ -220,24 +222,24 @@
                     <div>
                         <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Avant-Garde Shapes (+10k)</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Coffin" class="nail-crop crop-coffin">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-coffin data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Coffin</span>
                             </label>
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Stiletto" class="nail-crop crop-stiletto">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-stiletto data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Stiletto</span>
                             </label>
-                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
-                                <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5 relative">
-                                    <img src="https://i.pinimg.com/736x/8a/be/73/8abe734689252c803a5864ec648834db.jpg" alt="Ballerina" class="nail-crop crop-custom">
+                            <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Ballerina" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-24 bg-[#FAF1EC] rounded-lg overflow-hidden mb-1.5 relative">
+                                    <div class="nail-model shape-ballerina data-nail-live"></div>
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Ballerina</span>
                             </label>
@@ -249,7 +251,7 @@
             <!-- SECTION 4: ART ELEVATION -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
-                    <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
+                    <span class="heading-rococo text-xl italic text-[#B57873]">IV.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Delicate Hand-Paint</h2>
                 </div>
                 <div class="space-y-3 py-1">
@@ -302,6 +304,42 @@
                 </div>
             </div>
 
+            <!-- SECTION 6: ADHESIVE SELECTION (NEW) -->
+            <div class="space-y-4">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
+                    <span class="heading-rococo text-xl italic text-[#B57873]">VI.</span>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Nail Adhesive</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-3" id="glueGroup">
+                    <label class="visual-option-card relative flex items-start p-4 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="glue" value="Lem Jelly (Tabs)" checked class="sr-only" onchange="syncVisualOptions()">
+                        <div class="flex-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Lem Jelly / Nail Glue Tabs</span>
+                            <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">Sangat aman, praktis, tidak merusak kuku asli, & kuku palsu bisa dipakai berulang kali (Bertahan 1-3 hari).</p>
+                        </div>
+                        <span class="mono-data text-[9px] text-[#B57873] font-bold bg-[#FAF1EC] px-2 py-1 rounded-md uppercase ml-2">Free</span>
+                    </label>
+
+                    <label class="visual-option-card relative flex items-start p-4 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="glue" value="Lem Cair (Liquid)" class="sr-only" onchange="syncVisualOptions()">
+                        <div class="flex-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Lem Cair / Liquid Nail Glue</span>
+                            <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">Ekstra kuat, tahan air, cocok untuk aktivitas harian tanpa takut lepas (Bertahan 1-2 minggu).</p>
+                        </div>
+                        <span class="mono-data text-[9px] text-[#B57873] font-bold bg-[#FAF1EC] px-2 py-1 rounded-md uppercase ml-2">Free</span>
+                    </label>
+
+                    <label class="visual-option-card relative flex items-start p-4 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="glue" value="Lem Solid Gel (UV Lamp Required)" class="sr-only" onchange="syncVisualOptions()">
+                        <div class="flex-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Solid Nail Glue Gel (Req. UV Lamp)</span>
+                            <p class="text-[11px] text-stone-500 mt-0.5 leading-relaxed">Kualitas standar salon, dipasang menggunakan lampu UV. Sangat rapi & awet (Bertahan 2-4 minggu).</p>
+                        </div>
+                        <span class="mono-data text-[9px] text-[#B57873] font-bold bg-[#FAF1EC] px-2 py-1 rounded-md uppercase ml-2">Free</span>
+                    </label>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -309,11 +347,11 @@
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] via-[#FAF6F0]/90 to-transparent z-50">
         <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
             <div>
-                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// TOTAL VALUE</p>
+                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// BOUDOIR VALUE</p>
                 <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 75.000</p>
             </div>
             <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo rounded-xl shadow-md">
-                ORDER SPEC
+                Secure Spec
             </button>
         </div>
     </div>
@@ -333,7 +371,7 @@
         }
 
         function syncVisualOptions() {
-            const containerIds = ['lengthGroup', 'shapeGroup'];
+            const containerIds = ['lengthGroup', 'shapeGroup', 'glueGroup'];
             
             containerIds.forEach(id => {
                 const cards = document.getElementById(id).querySelectorAll('.visual-option-card');
@@ -345,6 +383,18 @@
                         card.classList.remove('is-active');
                     }
                 });
+            });
+
+            // Live engine: Update preview heights inside Shape Profiles selection based on chosen Length Tier
+            const currentLength = document.querySelector('input[name="length"]:checked').value;
+            let targetHeight = "50px"; // Default Short
+            
+            if (currentLength === "Medium") targetHeight = "62px";
+            else if (currentLength === "Long") targetHeight = "74px";
+            else if (currentLength === "XL") targetHeight = "86px";
+            
+            document.querySelectorAll('.data-nail-live').forEach(nail => {
+                nail.style.height = targetHeight;
             });
 
             calculateTotal();
@@ -361,7 +411,7 @@
             
             const shapeElement = document.querySelector('input[name="shape"]:checked').value;
             let shapePrice = 0;
-            if (shapeElement.startsWith("Premium") || shapeElement === "Custom Shape") {
+            if (shapeElement.startsWith("Premium") || shapeElement === "Ballerina") {
                 shapePrice = 10000;
             }
             
@@ -384,6 +434,7 @@
         function sendToWhatsApp() {
             const length = document.querySelector('input[name="length"]:checked').value;
             const shape = document.querySelector('input[name="shape"]:checked').value;
+            const glue = document.querySelector('input[name="glue"]:checked').value;
             const artLine = document.getElementById('artLine').value;
             const artChrome = document.getElementById('artChrome').value;
             const accCharm = document.getElementById('accCharm').value;
@@ -391,16 +442,16 @@
             const total = document.getElementById('floatingPriceDisplay').innerText;
             const fotoStatus = hasImage ? "Uploaded & Awaiting Curation" : "None";
 
-            const textMessage = ` EFFORTLESS COLLECTION — EVELATE ORDER \n\n` +
+            const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
                                 `• Length Model: ${length}\n` +
                                 `• Silhouette Contour: ${shape}\n` +
+                                `• Nail Adhesive: ${glue} (Free)\n` +
                                 `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
                                 `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
                                 `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
                                 `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n` +
                                 `• Boudoir Portrait: ${fotoStatus}\n\n` +
                                 `*ESTIMATED VALUATION:* ${total}\n\n` +
-                                `Thank you for your order.`;
                                 `Bespoke royal alignment initiated via Effortless Collection.`;
 
             const encodedMessage = encodeURIComponent(textMessage);
