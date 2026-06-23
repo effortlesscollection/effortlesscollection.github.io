@@ -6,75 +6,78 @@
     <title>Effortless Collection — @ec.llind</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono&display=swap" rel="stylesheet">
-    
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #FAF6F0; color: #2D2522; }
         .heading-rococo { font-family: 'Playfair Display', serif; }
         .script-coquette { font-family: 'Italianno', cursive; }
         .mono-data { font-family: 'Space Mono', monospace; }
-        .rococo-card { background-color: #FCF8F5; border: 2px solid #E6DDD0; box-shadow: 0 20px 40px rgba(181, 120, 115, 0.06); }
+        .rococo-card { background-color: #FCF8F5; border: 2px solid #E6DDD0; }
         .visual-option-card { transition: all 0.3s ease; opacity: 0.75; }
-        .visual-option-card.is-active { opacity: 1; border-color: #B57873; background-color: #FFF; box-shadow: 0 10px 25px rgba(181, 120, 115, 0.12); transform: translateY(-3px); }
-        .nail-model { width: 34px; height: 70px; background: linear-gradient(135deg, #FADCD5 0%, #F5C6BC 50%, #E8B0A5 100%); position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); box-shadow: 2px 4px 10px rgba(45, 37, 34, 0.12); }
-        input[type="range"] { -webkit-appearance: none; appearance: none; background: #E6DDD0; height: 4px; border-radius: 2px; }
+        .visual-option-card.is-active { opacity: 1; border-color: #B57873; background-color: #FFF; transform: translateY(-3px); }
+        .nail-model { width: 34px; height: 70px; background: linear-gradient(135deg, #FADCD5 0%, #F5C6BC 50%, #E8B0A5 100%); position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); }
+        input[type="range"] { -webkit-appearance: none; background: #E6DDD0; height: 4px; border-radius: 2px; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: #B57873; border-radius: 50%; cursor: pointer; }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
     <header class="w-full text-center pt-16 pb-12 px-4 max-w-xl mx-auto">
-        <h1 class="heading-rococo text-5xl text-[#2D2522]">Effortless</h1>
+        <h1 class="heading-rococo text-5xl">Effortless</h1>
         <div class="script-coquette text-4xl text-[#B57873]">Collection</div>
-        <p class="text-stone-500 text-[10px] mt-4 tracking-widest uppercase">@ec.llind</p>
+        <p class="text-stone-500 text-[10px] uppercase tracking-widest mt-2">@ec.llind</p>
     </header>
 
     <main class="max-w-xl mx-auto px-4 pb-52">
         <div class="rococo-card p-6 rounded-3xl space-y-8">
             <!-- Client Identity -->
             <div>
-                <label class="block text-[9px] font-bold uppercase tracking-wider mb-2">Your Name *</label>
-                <input type="text" id="clientName" class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:border-[#B57873] outline-none" placeholder="Nama lengkap">
+                <label class="block text-[9px] font-bold uppercase tracking-wider mb-2">Nama Anda *</label>
+                <input type="text" id="clientName" class="w-full p-3 text-xs border rounded-xl" placeholder="Nama lengkap">
             </div>
 
-            <!-- Length Tier (Contoh 50k base) -->
+            <!-- Length -->
             <div id="lengthGroup" class="grid grid-cols-2 gap-3">
-                <label class="visual-option-card p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl">
-                    <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
-                    <div class="font-semibold text-sm">Short</div>
-                    <div class="text-[9px] text-[#B57873] font-bold">Base Price 50k</div>
+                <label class="visual-option-card p-3 border rounded-2xl cursor-pointer">
+                    <input type="radio" name="length" value="Short" checked class="hidden" onchange="syncVisualOptions()">
+                    <div class="text-sm font-semibold">Short</div>
+                    <div class="text-[9px] text-[#B57873]">Base 50k</div>
                 </label>
+                <!-- Tambahkan pilihan lain di sini jika perlu -->
             </div>
 
-            <!-- Art Elevation -->
-            <div class="space-y-3">
-                <div class="flex justify-between">
-                    <span class="text-xs">Extra Art (per kuku)</span>
-                    <span id="artDisplay" class="font-bold text-[#B57873]">0</span>
-                </div>
+            <!-- Art -->
+            <div class="space-y-4">
+                <div class="flex justify-between text-xs font-bold"><span>Fine Art (per kuku)</span><span id="artDisplay">0</span></div>
                 <input type="range" id="artSlider" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
             </div>
         </div>
     </main>
 
-    <!-- Fixed Footer dengan 2 tombol -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] to-transparent z-50">
-        <div class="max-w-xl mx-auto bg-[#B2BABC] p-5 rounded-3xl flex justify-between items-center text-white shadow-xl">
+    <!-- Footer -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-[#FAF6F0] z-50">
+        <div class="max-w-xl mx-auto bg-[#2D2522] p-5 rounded-3xl flex justify-between items-center text-white">
             <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest">Total Price</p>
-                <p id="floatingPriceDisplay" class="text-xl font-bold">Rp 50.000</p>
+                <p class="text-[9px] opacity-70">Total Estimasi</p>
+                <p id="totalDisplay" class="text-xl font-bold">Rp 50.000</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="checkout('whatsapp')" class="bg-[#25D366] px-4 py-3 rounded-xl text-[10px] font-bold uppercase">WA</button>
-                <button onclick="checkout('instagram')" class="bg-[#B57873] px-4 py-3 rounded-xl text-[10px] font-bold uppercase">DM</button>
+                <button onclick="checkout('whatsapp')" class="bg-[#25D366] px-5 py-3 rounded-xl text-xs font-bold">WA</button>
+                <button onclick="checkout('instagram')" class="bg-[#B57873] px-5 py-3 rounded-xl text-xs font-bold">DM</button>
             </div>
         </div>
     </div>
 
     <script>
         const INSTAGRAM_USERNAME = "ec.llind";
-        const WA_NUMBER = "6281331118565";
 
-        function syncVisualOptions() { calculateTotal(); }
+        function syncVisualOptions() {
+            document.querySelectorAll('.visual-option-card').forEach(card => {
+                const radio = card.querySelector('input');
+                if(radio && radio.checked) card.classList.add('is-active');
+                else card.classList.remove('is-active');
+            });
+            calculateTotal();
+        }
 
         function calculateTotal() {
             const basePrice = 50000;
@@ -82,26 +85,23 @@
             document.getElementById('artDisplay').innerText = artCount;
             
             const total = basePrice + (artCount * 5000);
-            document.getElementById('floatingPriceDisplay').innerText = `Rp ${total.toLocaleString('id-ID')}`;
-        }
-
-        function getOrderMessage() {
-            const name = document.getElementById('clientName').value || "Pelanggan";
-            const total = document.getElementById('floatingPriceDisplay').innerText;
-            return `Halo @ec.llind, saya ${name} ingin memesan kuku. Total pesanan saya: ${total}. Mohon bantuannya ya!`;
+            document.getElementById('totalDisplay').innerText = `Rp ${total.toLocaleString('id-ID')}`;
         }
 
         function checkout(channel) {
-            const msg = getOrderMessage();
-            if (channel === 'whatsapp') {
-                window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`);
+            const name = document.getElementById('clientName').value || "Pelanggan";
+            const total = document.getElementById('totalDisplay').innerText;
+            const msg = `Halo @ec.llind, saya ${name} ingin pesan kuku. Total: ${total}. Mohon bantuannya ya!`;
+            
+            if(channel === 'whatsapp') {
+                window.open(`https://wa.me/6281331118565?text=${encodeURIComponent(msg)}`);
             } else {
-                navigator.clipboard.writeText(msg).then(() => {
-                    alert("Pesan sudah disalin! Silakan buka DM @ec.llind dan tempel (paste) di sana.");
-                    window.open(`https://instagram.com/${INSTAGRAM_USERNAME}`);
-                });
+                navigator.clipboard.writeText(msg);
+                alert("Pesan disalin! Silakan paste di DM @ec.llind");
+                window.open(`https://instagram.com/${INSTAGRAM_USERNAME}`);
             }
         }
+        syncVisualOptions();
     </script>
 </body>
 </html>
