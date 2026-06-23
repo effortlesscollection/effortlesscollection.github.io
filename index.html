@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Effortless Collection — @ec.llind</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono&display=swap" rel="stylesheet">
     
     <style>
@@ -15,20 +13,14 @@
         .script-coquette { font-family: 'Italianno', cursive; }
         .mono-data { font-family: 'Space Mono', monospace; }
         .rococo-card { background-color: #FCF8F5; border: 2px solid #E6DDD0; box-shadow: 0 20px 40px rgba(181, 120, 115, 0.06); }
-        .visual-option-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0.75; }
+        .visual-option-card { transition: all 0.3s ease; opacity: 0.75; }
         .visual-option-card.is-active { opacity: 1; border-color: #B57873; background-color: #FFF; box-shadow: 0 10px 25px rgba(181, 120, 115, 0.12); transform: translateY(-3px); }
         .nail-model { width: 34px; height: 70px; background: linear-gradient(135deg, #FADCD5 0%, #F5C6BC 50%, #E8B0A5 100%); position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); box-shadow: 2px 4px 10px rgba(45, 37, 34, 0.12); }
-        .shape-square { border-radius: 0 0 12px 12px; }
-        .shape-oval { border-radius: 16px 16px 12px 12px; }
-        .shape-almond { border-radius: 50% 50% 12px 12px / 75% 75% 12px 12px; }
-        .shape-coffin { clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
-        .shape-stiletto { clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
-        .shape-ballerina { clip-path: polygon(28% 0%, 72% 0%, 100% 100%, 0% 100%); border-radius: 0 0 12px 12px; }
         input[type="range"] { -webkit-appearance: none; appearance: none; background: #E6DDD0; height: 4px; border-radius: 2px; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: #B57873; border-radius: 50%; cursor: pointer; }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
     <header class="w-full text-center pt-16 pb-12 px-4 max-w-xl mx-auto">
         <h1 class="heading-rococo text-5xl text-[#2D2522]">Effortless</h1>
@@ -38,41 +30,77 @@
 
     <main class="max-w-xl mx-auto px-4 pb-52">
         <div class="rococo-card p-6 rounded-3xl space-y-8">
-            <!-- Form content sama seperti sebelumnya -->
+            <!-- Client Identity -->
             <div>
-                <label class="block text-xs font-bold mb-2">Nama Anda *</label>
-                <input type="text" id="clientName" class="w-full p-3 border rounded-xl" placeholder="Nama">
+                <label class="block text-[9px] font-bold uppercase tracking-wider mb-2">Your Name *</label>
+                <input type="text" id="clientName" class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:border-[#B57873] outline-none" placeholder="Nama lengkap">
             </div>
-            <!-- (Bagian lain tetap sama) -->
+
+            <!-- Length Tier (Contoh 50k base) -->
+            <div id="lengthGroup" class="grid grid-cols-2 gap-3">
+                <label class="visual-option-card p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl">
+                    <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
+                    <div class="font-semibold text-sm">Short</div>
+                    <div class="text-[9px] text-[#B57873] font-bold">Base Price 50k</div>
+                </label>
+            </div>
+
+            <!-- Art Elevation -->
+            <div class="space-y-3">
+                <div class="flex justify-between">
+                    <span class="text-xs">Extra Art (per kuku)</span>
+                    <span id="artDisplay" class="font-bold text-[#B57873]">0</span>
+                </div>
+                <input type="range" id="artSlider" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
+            </div>
         </div>
     </main>
 
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-[#FAF6F0] z-50">
-        <div class="max-w-xl mx-auto bg-[#B2BABC] p-5 rounded-3xl flex justify-between items-center text-white">
+    <!-- Fixed Footer dengan 2 tombol -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] to-transparent z-50">
+        <div class="max-w-xl mx-auto bg-[#B2BABC] p-5 rounded-3xl flex justify-between items-center text-white shadow-xl">
             <div>
-                <p class="text-[9px] uppercase font-bold text-stone-900">// Total Harga</p>
-                <p id="floatingPriceDisplay" class="text-2xl font-bold">Rp 50.000</p>
+                <p class="text-[9px] font-bold uppercase tracking-widest">Total Price</p>
+                <p id="floatingPriceDisplay" class="text-xl font-bold">Rp 50.000</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="checkout('whatsapp')" class="bg-[#25D366] px-4 py-3 rounded-xl text-xs font-bold uppercase">WA</button>
-                <button onclick="checkout('instagram')" class="bg-[#B57873] px-4 py-3 rounded-xl text-xs font-bold uppercase">Copy DM</button>
+                <button onclick="checkout('whatsapp')" class="bg-[#25D366] px-4 py-3 rounded-xl text-[10px] font-bold uppercase">WA</button>
+                <button onclick="checkout('instagram')" class="bg-[#B57873] px-4 py-3 rounded-xl text-[10px] font-bold uppercase">DM</button>
             </div>
         </div>
     </div>
 
     <script>
-        const WHATSAPP_NUMBER = "6281331118565"; 
-        const INSTAGRAM_USERNAME = "ec.llind"; // Username sudah diperbarui
+        const INSTAGRAM_USERNAME = "ec.llind";
+        const WA_NUMBER = "6281331118565";
 
-        // Logika kalkulasi harga dasar 50k
+        function syncVisualOptions() { calculateTotal(); }
+
         function calculateTotal() {
             const basePrice = 50000;
-            // ... (logika penambahan harga lainnya tetap sama)
-            document.getElementById('floatingPriceDisplay').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+            const artCount = parseInt(document.getElementById('artSlider').value);
+            document.getElementById('artDisplay').innerText = artCount;
+            
+            const total = basePrice + (artCount * 5000);
+            document.getElementById('floatingPriceDisplay').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function getOrderMessage() {
+            const name = document.getElementById('clientName').value || "Pelanggan";
+            const total = document.getElementById('floatingPriceDisplay').innerText;
+            return `Halo @ec.llind, saya ${name} ingin memesan kuku. Total pesanan saya: ${total}. Mohon bantuannya ya!`;
         }
 
         function checkout(channel) {
-            // ... (fungsi checkout menggunakan INSTAGRAM_USERNAME)
+            const msg = getOrderMessage();
+            if (channel === 'whatsapp') {
+                window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`);
+            } else {
+                navigator.clipboard.writeText(msg).then(() => {
+                    alert("Pesan sudah disalin! Silakan buka DM @ec.llind dan tempel (paste) di sana.");
+                    window.open(`https://instagram.com/${INSTAGRAM_USERNAME}`);
+                });
+            }
         }
     </script>
 </body>
