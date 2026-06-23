@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Press-On Nails | Starting 150k</title>
+    <title>Custom Press-On Nails | Starting 75k</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Cute & Bubbly Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background-color: #faf8f5;
         }
-        .brand-title {
-            font-family: 'Syne', sans-serif;
+        .cute-title {
+            font-family: 'Fredoka', sans-serif;
         }
     </style>
 </head>
@@ -24,14 +24,15 @@
 
     <!-- Brand Header -->
     <header class="w-full text-center py-12 px-4 max-w-xl mx-auto">
-        <div class="inline-flex items-center gap-1.5 bg-neutral-900 text-amber-100 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">
+        <div class="inline-flex items-center gap-1.5 bg-neutral-950 text-rose-100 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">
             <span class="w-1.5 h-1.5 bg-rose-400 rounded-full animate-ping"></span> Live Studio Pricing
         </div>
-        <h1 class="brand-title text-4xl font-extrabold text-neutral-900 tracking-tight leading-none mb-3">
-            DESIGN YOUR <br><span class="text-rose-500">OWN NAILS.</span>
+        <!-- CUTE FONT TITLE SECTION -->
+        <h1 class="cute-title text-4xl font-bold text-neutral-900 tracking-tight leading-tight mb-3">
+            Design your dream <br><span class="text-rose-400">nails. ✨</span>
         </h1>
-        <p class="text-neutral-500 text-xs md:text-sm max-w-xs mx-auto">
-            Gak usah nebak harga lagi. Racik menu kuku impianmu, lihat totalnya secara transparan, lalu checkout via WhatsApp instant.
+        <p class="text-neutral-500 text-xs md:text-sm max-w-xs mx-auto font-medium">
+            Elevate your everyday. Custom & ready-to-wear press-on art, checkout via WhatsApp instant.
         </p>
     </header>
 
@@ -42,29 +43,29 @@
             <!-- STEP 1: LENGTH -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 text-xs font-bold flex items-center justify-center">01</span>
-                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase">Pilih Panjang Kuku</h2>
+                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-500 text-xs font-bold flex items-center justify-center cute-title">01</span>
+                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase cute-title">Pilih Panjang Kuku</h2>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
-                    <!-- Option 1 -->
-                    <label class="group relative flex flex-col overflow-hidden border-2 border-neutral-100 rounded-3xl cursor-pointer transition-all duration-300 has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
-                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80" alt="Short Nails" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="p-4 bg-white relative z-10">
-                            <input type="radio" name="length" value="Short/Medium" checked class="sr-only" onchange="calculateTotal()">
-                            <span class="font-bold text-sm text-neutral-900 block">Short / Medium</span>
-                            <span class="text-[11px] text-neutral-400 block mt-0.5">Base Menu Included</span>
-                            <span class="text-xs font-black text-rose-500 block mt-2">+Rp 0</span>
-                        </div>
+                    <label class="relative flex flex-col p-4 border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="length" value="Short" checked class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-sm text-neutral-900">Short</span>
+                        <span class="text-xs font-semibold text-rose-400 mt-1">+Rp 0</span>
                     </label>
-                    <!-- Option 2 -->
-                    <label class="group relative flex flex-col overflow-hidden border-2 border-neutral-100 rounded-3xl cursor-pointer transition-all duration-300 has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
-                        <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=400&q=80" alt="Long Nails" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="p-4 bg-white relative z-10">
-                            <input type="radio" name="length" value="Long/XL" class="sr-only" onchange="calculateTotal()">
-                            <span class="font-bold text-sm text-neutral-900 block">Long / XL Extension</span>
-                            <span class="text-[11px] text-neutral-400 block mt-0.5">Extra dramatic look</span>
-                            <span class="text-xs font-black text-rose-500 block mt-2">+Rp 30.000</span>
-                        </div>
+                    <label class="relative flex flex-col p-4 border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="length" value="Medium" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-sm text-neutral-900">Medium</span>
+                        <span class="text-xs font-semibold text-rose-400 mt-1">+Rp 10.000</span>
+                    </label>
+                    <label class="relative flex flex-col p-4 border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="length" value="Long" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-sm text-neutral-900">Long</span>
+                        <span class="text-xs font-semibold text-rose-400 mt-1">+Rp 20.000</span>
+                    </label>
+                    <label class="relative flex flex-col p-4 border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="length" value="XL" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-sm text-neutral-900">XL Extension</span>
+                        <span class="text-xs font-semibold text-rose-400 mt-1">+Rp 30.000</span>
                     </label>
                 </div>
             </div>
@@ -72,73 +73,118 @@
             <!-- STEP 2: SHAPE -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 text-xs font-bold flex items-center justify-center">02</span>
-                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase">Pilih Bentuk Kuku</h2>
+                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-500 text-xs font-bold flex items-center justify-center cute-title">02</span>
+                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase cute-title">Pilih Bentuk / Shape</h2>
                 </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <!-- Option 1 -->
-                    <label class="group relative flex flex-col overflow-hidden border-2 border-neutral-100 rounded-3xl cursor-pointer transition-all duration-300 has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
-                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=400&q=80" alt="Basic Shapes" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="p-4 bg-white relative z-10">
-                            <input type="radio" name="shape" value="Basic (Square/Oval/Almond)" checked class="sr-only" onchange="calculateTotal()">
-                            <span class="font-bold text-sm text-neutral-900 block">Basic Shapes</span>
-                            <span class="text-[11px] text-neutral-400 block mt-0.5">Square, Oval, Almond</span>
-                            <span class="text-xs font-black text-rose-500 block mt-2">+Rp 0</span>
-                        </div>
+                
+                <p class="text-xs font-bold text-neutral-400 uppercase tracking-wider">Basic Shapes (Harga Normal)</p>
+                <div class="grid grid-cols-3 gap-2">
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Square</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+0</span>
                     </label>
-                    <!-- Option 2 -->
-                    <label class="group relative flex flex-col overflow-hidden border-2 border-neutral-100 rounded-3xl cursor-pointer transition-all duration-300 has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
-                        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=400&q=80" alt="Premium Shapes" class="w-full h-36 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="p-4 bg-white relative z-10">
-                            <input type="radio" name="shape" value="Premium (Coffin/Stiletto)" class="sr-only" onchange="calculateTotal()">
-                            <span class="font-bold text-sm text-neutral-900 block">Premium Shapes</span>
-                            <span class="text-[11px] text-neutral-400 block mt-0.5">Coffin, Stiletto, Custom</span>
-                            <span class="text-xs font-black text-rose-500 block mt-2">+Rp 15.000</span>
-                        </div>
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Oval</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+0</span>
+                    </label>
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Almond</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+0</span>
+                    </label>
+                </div>
+
+                <p class="text-xs font-bold text-neutral-400 uppercase tracking-wider pt-2">Premium Shapes (+Rp 10.000)</p>
+                <div class="grid grid-cols-3 gap-2">
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Coffin</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+10k</span>
+                    </label>
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Stiletto</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+10k</span>
+                    </label>
+                    <label class="relative flex flex-col p-3 text-center border-2 border-neutral-100 rounded-xl cursor-pointer hover:border-neutral-300 transition has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50/50">
+                        <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="calculateTotal()">
+                        <span class="font-bold text-xs text-neutral-900">Custom</span>
+                        <span class="text-[10px] text-rose-400 font-bold mt-0.5">+10k</span>
                     </label>
                 </div>
             </div>
 
-            <!-- STEP 3: CUSTOM SLIDERS -->
-            <div class="space-y-6 pt-2">
-                <!-- Art Slider -->
-                <div class="space-y-2">
+            <!-- STEP 3: CUSTOM ART -->
+            <div class="space-y-5 pt-2">
+                <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-500 text-xs font-bold flex items-center justify-center cute-title">03</span>
+                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase cute-title">Custom Nail Art (+Rp 5.000 / Kuku)</h2>
+                </div>
+                
+                <!-- Art Type 1 -->
+                <div class="space-y-1.5 bg-neutral-50 p-4 rounded-2xl">
                     <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 text-xs font-bold flex items-center justify-center">03</span>
-                            <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase">Custom Art Nail</h2>
-                        </div>
-                        <span id="artCountDisplay" class="text-xs font-bold text-neutral-900 bg-neutral-100 px-2.5 py-1 rounded-full">0 Kuku</span>
+                        <span class="text-xs font-bold text-neutral-800">Line Art / Swirls / French</span>
+                        <span id="art1Display" class="text-xs font-bold text-rose-400 cute-title">0 Kuku</span>
                     </div>
-                    <p class="text-[11px] text-neutral-400">French tips, chrome powder, swirls, line art (+10k / kuku)</p>
-                    <input type="range" id="artCount" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-100 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
+                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
                 </div>
 
-                <!-- Charms Slider -->
-                <div class="space-y-2">
+                <!-- Art Type 2 -->
+                <div class="space-y-1.5 bg-neutral-50 p-4 rounded-2xl">
                     <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 text-xs font-bold flex items-center justify-center">04</span>
-                            <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase">Aksesoris / 3D Gel</h2>
-                        </div>
-                        <span id="charmCountDisplay" class="text-xs font-bold text-neutral-900 bg-neutral-100 px-2.5 py-1 rounded-full">0 Item</span>
+                        <span class="text-xs font-bold text-neutral-800">Chrome Powder / Cat-Eye</span>
+                        <span id="art2Display" class="text-xs font-bold text-rose-400 cute-title">0 Kuku</span>
                     </div>
-                    <p class="text-[11px] text-neutral-400">Pita ribbon, rhinestone crystal, glitter bomb (+15k / charm)</p>
-                    <input type="range" id="charmCount" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-100 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
+                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
+                </div>
+            </div>
+
+            <!-- STEP 4: ACCESSORIES -->
+            <div class="space-y-5 pt-2">
+                <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-500 text-xs font-bold flex items-center justify-center cute-title">04</span>
+                    <h2 class="font-bold text-neutral-900 text-sm tracking-wide uppercase cute-title">Pilih Aksesoris (Per Item)</h2>
+                </div>
+
+                <!-- Acc Type 1 -->
+                <div class="space-y-1.5 bg-neutral-50 p-4 rounded-2xl">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold text-neutral-800 block">Premium Charm / Ribbon / 3D Gel</span>
+                            <span class="text-[10px] text-neutral-400 block">+Rp 10.000 / item</span>
+                        </div>
+                        <span id="charmDisplay" class="text-xs font-bold text-rose-400 cute-title">0 Item</span>
+                    </div>
+                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
+                </div>
+
+                <!-- Acc Type 2 -->
+                <div class="space-y-1.5 bg-neutral-50 p-4 rounded-2xl">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold text-neutral-800 block">Rhinestone Crystal / Glitter Bomb</span>
+                            <span class="text-[10px] text-neutral-400 block">+Rp 5.000 / item</span>
+                        </div>
+                        <span id="stoneDisplay" class="text-xs font-bold text-rose-400 cute-title">0 Item</span>
+                    </div>
+                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full h-1.5 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-900" oninput="calculateTotal()">
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- NEW 2026 FLOATING ACTION CONTROLLER (Sticky Bottom Bar) -->
+    <!-- FLOATING ACTION CONTROLLER -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white to-transparent z-50">
         <div class="max-w-md mx-auto bg-neutral-950 text-white rounded-3xl p-4 shadow-2xl flex items-center justify-between gap-4 border border-neutral-800">
             <div>
                 <p class="text-[10px] uppercase tracking-wider text-neutral-400 font-medium">Estimasi Total</p>
-                <p id="floatingPriceDisplay" class="brand-title text-xl font-bold text-white tracking-tight">Rp 150.000</p>
+                <p id="floatingPriceDisplay" class="cute-title text-xl font-bold text-white tracking-tight">Rp 75.000</p>
             </div>
-            <button type="button" onclick="sendToWhatsApp()" class="bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-neutral-950 font-bold px-5 py-3 rounded-2xl text-xs tracking-wide uppercase transition-all duration-200 flex items-center gap-1.5 shadow-lg shadow-emerald-500/20">
+            <button type="button" onclick="sendToWhatsApp()" class="bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-neutral-950 font-bold px-5 py-3 rounded-2xl text-xs tracking-wide uppercase transition-all duration-200 flex items-center gap-1.5 shadow-lg shadow-emerald-500/20 cute-title">
                 Order via WA
                 <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.411 0 11.981 0c3.184.001 6.177 1.242 8.426 3.496 2.249 2.254 3.487 5.25 3.486 8.438-.003 6.657-5.353 12.006-11.924 12.006-2.01-.001-3.987-.508-5.742-1.472L0 24zm6.59-4.846c1.666.988 3.311 1.485 5.321 1.486 5.53 0 10.02-4.494 10.022-10.027.001-2.68-1.043-5.198-2.94-7.098C17.132 3.616 14.622 2.57 11.98 2.57c-5.536 0-10.025 4.494-10.028 10.029-.001 2.046.508 3.715 1.527 5.342l-1.01 3.693 3.798-.98zm13.611-11.085c-.272-.136-1.611-.795-1.86-.886-.25-.091-.432-.136-.613.136-.182.273-.703.886-.862 1.068-.159.182-.318.205-.59.069-.272-.136-1.15-.424-2.19-1.353-.809-.721-1.355-1.613-1.514-1.886-.159-.273-.017-.42.119-.556.123-.122.272-.318.408-.477.136-.159.182-.273.272-.455.091-.182.046-.341-.023-.477-.069-.136-.613-1.477-.84-2.023-.222-.534-.467-.461-.641-.47l-.547-.008c-.182 0-.477.069-.727.341-.25.273-.954.932-.954 2.273s.977 2.636 1.114 2.818c.136.182 1.92 2.932 4.652 4.114.65.281 1.157.449 1.553.575.654.208 1.248.179 1.719.108.524-.079 1.611-.659 1.839-1.295.227-.636.227-1.182.159-1.295-.069-.114-.25-.182-.523-.318z"/>
@@ -149,43 +195,61 @@
 
     <!-- Calculations Logic -->
     <script>
-        // MASUKKAN NOMOR WHATSAPP KAMU DI SINI (Gunakan kode negara 62, hilangkan tanda + dan angka 0 di depan)
-        const WHATSAPP_NUMBER = "6281331118565"; 
+        // MASUKKAN NOMOR WHATSAPP KAMU DI SINI (Format: 62...)
+        const WHATSAPP_NUMBER = "6281234567890"; 
 
         function calculateTotal() {
-            const basePrice = 150000;
+            const basePrice = 75000;
             
+            // 1. Length Calculation
             const lengthElement = document.querySelector('input[name="length"]:checked').value;
-            const lengthPrice = lengthElement === "Long/XL" ? 30000 : 0;
+            let lengthPrice = 0;
+            if (lengthElement === "Medium") lengthPrice = 10000;
+            else if (lengthElement === "Long") lengthPrice = 20000;
+            else if (lengthElement === "XL") lengthPrice = 30000;
             
+            // 2. Shape Calculation
             const shapeElement = document.querySelector('input[name="shape"]:checked').value;
-            const shapePrice = shapeElement === "Premium (Coffin/Stiletto)" ? 15000 : 0;
+            let shapePrice = 0;
+            if (shapeElement.startsWith("Premium") || shapeElement === "Custom Shape") {
+                shapePrice = 10000;
+            }
             
-            const artCount = parseInt(document.getElementById('artCount').value);
-            const artPrice = artCount * 10000;
-            document.getElementById('artCountDisplay').innerText = `${artCount} Kuku`;
+            // 3. Nail Art Calculations
+            const artLine = parseInt(document.getElementById('artLine').value);
+            const artChrome = parseInt(document.getElementById('artChrome').value);
+            document.getElementById('art1Display').innerText = `${artLine} Kuku`;
+            document.getElementById('art2Display').innerText = `${artChrome} Kuku`;
+            const totalArtPrice = (artLine + artChrome) * 5000;
             
-            const charmCount = parseInt(document.getElementById('charmCount').value);
-            const charmPrice = charmCount * 15000;
-            document.getElementById('charmCountDisplay').innerText = `${charmCount} Item`;
+            // 4. Accessories Calculations
+            const accCharm = parseInt(document.getElementById('accCharm').value);
+            const accStone = parseInt(document.getElementById('accStone').value);
+            document.getElementById('charmDisplay').innerText = `${accCharm} Item`;
+            document.getElementById('stoneDisplay').innerText = `${accStone} Item`;
+            const totalAccPrice = (accCharm * 10000) + (accStone * 5000);
             
-            const grandTotal = basePrice + lengthPrice + shapePrice + artPrice + charmPrice;
-            
+            // Total Grand
+            const grandTotal = basePrice + lengthPrice + shapePrice + totalArtPrice + totalAccPrice;
             document.getElementById('floatingPriceDisplay').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
         }
 
         function sendToWhatsApp() {
             const length = document.querySelector('input[name="length"]:checked').value;
             const shape = document.querySelector('input[name="shape"]:checked').value;
-            const art = document.getElementById('artCount').value;
-            const charm = document.getElementById('charmCount').value;
+            const artLine = document.getElementById('artLine').value;
+            const artChrome = document.getElementById('artChrome').value;
+            const accCharm = document.getElementById('accCharm').value;
+            const accStone = document.getElementById('accStone').value;
             const total = document.getElementById('floatingPriceDisplay').innerText;
 
-            const textMessage = `Halo Sis! ✨ Saya mau order Custom Press-On Nails dengan rincian berikut:\n\n` +
+            const textMessage = `Halo Kak! ✨ Saya mau order Custom Press-On Nails dengan rincian berikut:\n\n` +
                                 `- *Panjang:* ${length}\n` +
                                 `- *Shape:* ${shape}\n` +
-                                `- *Nail Art:* ${art} Kuku\n` +
-                                `- *Aksesoris/3D:* ${charm} Item\n\n` +
+                                `- *Art (Line/French):* ${artLine} Kuku\n` +
+                                `- *Art (Chrome/CatEye):* ${artChrome} Kuku\n` +
+                                `- *Aksesoris Charm/3D:* ${accCharm} Item\n` +
+                                `- *Aksesoris Stone/Glitter:* ${accStone} Item\n\n` +
                                 `*Estimasi Total:* ${total}\n\n` +
                                 `Boleh tolong dibantu cek slot order dan detail pengukurannya? Terima kasih! 💖`;
 
