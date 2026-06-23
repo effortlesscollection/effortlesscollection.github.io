@@ -432,34 +432,35 @@
         }
 
         function sendToWhatsApp() {
-            const length = document.querySelector('input[name="length"]:checked').value;
-            const shape = document.querySelector('input[name="shape"]:checked').value;
-            const glue = document.querySelector('input[name="glue"]:checked').value;
-            const artLine = document.getElementById('artLine').value;
-            const artChrome = document.getElementById('artChrome').value;
-            const accCharm = document.getElementById('accCharm').value;
-            const accStone = document.getElementById('accStone').value;
-            const total = document.getElementById('floatingPriceDisplay').innerText;
-            const fotoStatus = hasImage ? "Uploaded & Awaiting Curation" : "None";
+    const length = document.querySelector('input[name="length"]:checked').value;
+    const shape = document.querySelector('input[name="shape"]:checked').value;
+    const glue = document.querySelector('input[name="glue"]:checked').value;
+    const artLine = document.getElementById('artLine').value;
+    const artChrome = document.getElementById('artChrome').value;
+    const accCharm = document.getElementById('accCharm').value;
+    const accStone = document.getElementById('accStone').value;
+    const total = document.getElementById('floatingPriceDisplay').innerText;
+    
+    // Jika ada gambar, ingatkan pelanggan untuk melampirkannya secara manual di WA
+    const fotoStatus = hasImage ? "Ada (Mohon lampirkan fotonya kembali setelah pesan ini terkirim 🙏)" : "Tidak Ada";
 
-            const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
-                                `• Length Model: ${length}\n` +
-                                `• Silhouette Contour: ${shape}\n` +
-                                `• Nail Adhesive: ${glue} (Free)\n` +
-                                `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
-                                `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
-                                `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
-                                `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n` +
-                                `• Boudoir Portrait: ${fotoStatus}\n\n` +
-                                `*ESTIMATED VALUATION:* ${total}\n\n` +
-                                `Bespoke royal alignment initiated via Effortless Collection.`;
+    const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
+                        `• Length Model: ${length}\n` +
+                        `• Silhouette Contour: ${shape}\n` +
+                        `• Nail Adhesive: ${glue} (Free)\n` +
+                        `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
+                        `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
+                        `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
+                        `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n` +
+                        `• Boudoir Portrait: ${fotoStatus}\n\n` +
+                        `*ESTIMATED VALUATION:* ${total}\n\n` +
+                        `Bespoke royal alignment initiated via Effortless Collection.`;
 
-            const encodedMessage = encodeURIComponent(textMessage);
-            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-            
-            window.open(waUrl, '_blank');
-        }
-
+    const encodedMessage = encodeURIComponent(textMessage);
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    
+    window.open(waUrl, '_blank');
+}
         syncVisualOptions();
     </script>
 </body>
