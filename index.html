@@ -3,147 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBER NAILS LAB — Custom Press-On Collective</title>
+    <title>Effortless Collection — Custom Press-On Atelier</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts Multi-Mix -->
+    <!-- Google Fonts Multi-Mix (Cormorant Garamond + Outfit + Space Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: #0d0d12;
+            background-color: #080f1d; /* Rich Midnight Navy Canvas */
         }
-        .heading-cyber {
-            font-family: 'Syne', sans-serif;
-            letter-spacing: -0.03em;
+        .heading-classic {
+            font-family: 'Cormorant Garamond', serif;
         }
         .mono-data {
             font-family: 'Space Mono', monospace;
         }
-        /* Custom Neon Glows */
-        .neon-border-cyan {
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+        /* Neo-Classic Studio Aesthetics */
+        .atelier-card {
+            background-color: #fcfbfa; /* Warm Ivory/Creme Page */
+            border: 1px solid #eadecc;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-        .neon-text-pink {
-            text-shadow: 0 0 8px rgba(236, 72, 153, 0.4);
+        /* Sophisticated custom scrollbar / sliders */
+        input[type="range"]::-webkit-slider-thumb {
+            background: #080f1d;
+            border: 2px solid #eadecc;
+            border-radius: 0px;
         }
     </style>
 </head>
-<body class="text-slate-200 antialiased selection:bg-pink-500 selection:text-white">
+<body class="text-slate-300 antialiased selection:bg-neutral-800 selection:text-white">
 
     <!-- Header Section -->
-    <header class="w-full text-center py-16 px-4 max-w-xl mx-auto">
-        <div class="mono-data inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-pink-500 text-neutral-950 text-[10px] font-bold tracking-widest uppercase px-4 py-1 rounded-full mb-6">
-            // LAB EDITION 2026 //
+    <header class="w-full text-center py-20 px-4 max-w-xl mx-auto">
+        <div class="mono-data inline-flex items-center gap-2 text-[#eadecc] text-[10px] font-medium tracking-[0.2em] uppercase mb-4">
+            — ATELIER SPECIFICATION SHEET —
         </div>
-        <h1 class="heading-cyber text-4xl md:text-5xl font-extrabold uppercase leading-none tracking-tight mb-4 text-white">
-            NEO-GEN <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-pink-500 neon-text-pink">PRESS-ON LAB</span>
+        <h1 class="heading-classic text-5xl md:text-6xl font-light italic text-[#fcfbfa] leading-none mb-4 tracking-wide">
+            Effortless <br><span class="font-normal not-italic tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#eadecc] to-[#f4f1ea]">COLLECTION</span>
         </h1>
-        <p class="text-slate-400 text-xs md:text-sm max-w-xs mx-auto font-light tracking-wide leading-relaxed">
-            Configure your custom nail architecture. Real-time valuation. Tailored exclusively for your collective style.
+        <p class="text-slate-400 text-xs max-w-xs mx-auto font-light tracking-widest uppercase leading-relaxed border-t border-b border-slate-800 py-3 mt-4">
+            Bespoke Press-On Architecture & Valuations
         </p>
     </header>
 
     <!-- Main Container -->
     <main class="max-w-xl mx-auto px-4 pb-44">
-        <div class="bg-neutral-900/80 backdrop-blur-md border border-neutral-800 rounded-3xl p-6 md:p-8 shadow-2xl neon-border-cyan space-y-10">
+        <!-- Elegant Ivory Gallery Box -->
+        <div class="atelier-card rounded-none p-8 md:p-10 space-y-12 text-neutral-900">
             
-            <!-- SECTION 1: DROPBOX REFERENSI -->
+            <!-- SECTION 1: VISUAL BLUEPRINT -->
             <div class="space-y-4">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2.5">
-                        <span class="mono-data text-xs text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/40">01</span>
-                        <h2 class="heading-cyber font-bold text-sm tracking-wider uppercase text-white">Visual Blueprint</h2>
+                <div class="flex items-baseline justify-between border-b border-neutral-200 pb-2">
+                    <div class="flex items-baseline gap-3">
+                        <span class="heading-classic text-2xl italic text-neutral-400">I.</span>
+                        <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Visual Blueprint</h2>
                     </div>
-                    <span class="mono-data text-[10px] text-slate-500">OPTIONAL</span>
+                    <span class="mono-data text-[9px] text-neutral-400 tracking-wider">OPTIONAL</span>
                 </div>
                 <div class="flex items-center justify-center w-full">
-                    <label class="flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-neutral-800 bg-neutral-950/40 cursor-pointer hover:border-pink-500/40 hover:bg-neutral-950/80 transition-all rounded-2xl group">
+                    <label class="flex flex-col items-center justify-center w-full h-32 border border-neutral-300 bg-[#faf9f6] cursor-pointer hover:bg-neutral-50 transition-colors rounded-none">
                         <div class="flex flex-col items-center justify-center text-center px-4">
-                            <svg class="w-6 h-6 mb-2 text-slate-500 group-hover:text-pink-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            <svg class="w-5 h-5 mb-2 text-neutral-400 font-light" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                             </svg>
-                            <p class="text-xs text-slate-300 font-medium tracking-wide" id="uploadStatus">Upload Reference Artwork</p>
-                            <p class="mono-data text-[9px] text-slate-600 mt-1">PNG, JPG, or Screenshot</p>
+                            <p class="heading-classic text-sm italic text-neutral-800" id="uploadStatus">Upload reference rendering</p>
                         </div>
                         <input type="file" id="nailPhoto" accept="image/*" class="hidden" onchange="handleFileChange(this)">
                     </label>
                 </div>
             </div>
 
-            <!-- SECTION 2: LENGTH ARCHITECTURE -->
+            <!-- SECTION 2: LENGTH COUTURE -->
             <div class="space-y-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="mono-data text-xs text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/40">02</span>
-                    <h2 class="heading-cyber font-bold text-sm tracking-wider uppercase text-white">Nail Architecture (Length)</h2>
+                <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
+                    <span class="heading-classic text-2xl italic text-neutral-400">II.</span>
+                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Length Specification</h2>
                 </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <label class="relative flex flex-col p-4 bg-neutral-950/40 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-xl has-[:checked]:border-cyan-400 has-[:checked]:bg-cyan-950/10">
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="calculateTotal()">
-                        <span class="font-semibold text-sm tracking-wide text-white">Short Tier</span>
-                        <span class="mono-data text-[10px] text-slate-500 mt-1">Base Included</span>
+                        <span class="heading-classic font-normal text-lg text-neutral-900">Classic Short</span>
+                        <span class="mono-data text-[10px] text-neutral-400 mt-1">Complimentary Base</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-neutral-950/40 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-xl has-[:checked]:border-cyan-400 has-[:checked]:bg-cyan-950/10">
+                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="calculateTotal()">
-                        <span class="font-semibold text-sm tracking-wide text-white">Medium Tier</span>
-                        <span class="mono-data text-[10px] text-cyan-400 mt-1">+10,000</span>
+                        <span class="heading-classic font-normal text-lg text-neutral-900">Demi Medium</span>
+                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+10,000 IDR</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-neutral-950/40 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-xl has-[:checked]:border-cyan-400 has-[:checked]:bg-cyan-950/10">
+                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="calculateTotal()">
-                        <span class="font-semibold text-sm tracking-wide text-white">Long Extension</span>
-                        <span class="mono-data text-[10px] text-cyan-400 mt-1">+20,000</span>
+                        <span class="heading-classic font-normal text-lg text-neutral-900">Elegant Long</span>
+                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+20,000 IDR</span>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-neutral-950/40 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-xl has-[:checked]:border-cyan-400 has-[:checked]:bg-cyan-950/10">
+                    <label class="relative flex flex-col p-4 bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-[#faf9f6]">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="calculateTotal()">
-                        <span class="font-semibold text-sm tracking-wide text-white">Sculpted XL</span>
-                        <span class="mono-data text-[10px] text-cyan-400 mt-1">+30,000</span>
+                        <span class="heading-classic font-normal text-lg text-neutral-900">Sculpted XL</span>
+                        <span class="mono-data text-[10px] text-neutral-700 mt-1">+30,000 IDR</span>
                     </label>
                 </div>
             </div>
 
-            <!-- SECTION 3: SHAPE COUTURE -->
-            <div class="space-y-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="mono-data text-xs text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/40">03</span>
-                    <h2 class="heading-cyber font-bold text-sm tracking-wider uppercase text-white">Nail Silhouette (Shape)</h2>
+            <!-- SECTION 3: SILHOUETTE PROFILE -->
+            <div class="space-y-6">
+                <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
+                    <span class="heading-classic text-2xl italic text-neutral-400">III.</span>
+                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Silhouette Profiling</h2>
                 </div>
                 
                 <div class="space-y-4">
                     <div>
-                        <p class="mono-data text-[9px] text-slate-500 uppercase tracking-widest mb-2.5">// Essential Forms</p>
+                        <p class="mono-data text-[10px] text-neutral-400 uppercase tracking-[0.15em] mb-3">Essential Profiles</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Square</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Square</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Oval</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Oval</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Almond</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Almond</span>
                             </label>
                         </div>
                     </div>
 
                     <div>
-                        <p class="mono-data text-[9px] text-slate-500 uppercase tracking-widest mb-2.5">// Avant-Garde Profile (+10k)</p>
+                        <p class="mono-data text-[10px] text-neutral-400 uppercase tracking-[0.15em] mb-3">Avant-Garde Profiles (+10k)</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Coffin</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Coffin</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Stiletto</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Stiletto</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-neutral-950/30 border border-neutral-800 cursor-pointer hover:border-neutral-700 transition rounded-lg has-[:checked]:border-pink-500 has-[:checked]:bg-pink-950/10">
+                            <label class="relative flex flex-col p-3 text-center bg-white border border-neutral-200 cursor-pointer hover:border-neutral-800 transition rounded-none has-[:checked]:border-neutral-900 has-[:checked]:bg-neutral-50">
                                 <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-slate-200">Asymmetric</span>
+                                <span class="font-normal text-xs text-neutral-800 tracking-wider">Asymmetric</span>
                             </label>
                         </div>
                     </div>
@@ -152,92 +156,91 @@
 
             <!-- SECTION 4: ART ELEVATION -->
             <div class="space-y-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="mono-data text-xs text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/40">04</span>
-                    <h2 class="heading-cyber font-bold text-sm tracking-wider uppercase text-white">Custom Detailing (Per Nail)</h2>
+                <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
+                    <span class="heading-classic text-2xl italic text-neutral-400">IV.</span>
+                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Bespoke Line Artistry</h2>
                 </div>
 
-                <div class="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/60 rounded-xl">
-                    <div class="flex justify-between items-start">
+                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                    <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-semibold text-slate-200 block">Fine Line / Swirls / Aura Bleed</span>
-                            <span class="mono-data text-[9px] text-slate-500 mt-0.5">Precision mapping tier</span>
+                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Fine Line / Swirl Architecture / Aura Bleed</span>
+                            <span class="heading-classic italic text-[11px] text-neutral-400">Precision hand-painted structural accents</span>
                         </div>
-                        <span id="art1Display" class="mono-data text-xs font-bold text-pink-400 bg-pink-950/40 px-2.5 py-0.5 rounded border border-pink-900/30">0</span>
+                        <span id="art1Display" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
                     </div>
-                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full h-1 bg-neutral-800 appearance-none cursor-pointer accent-cyan-400 rounded-full" oninput="calculateTotal()">
+                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
                 </div>
 
-                <div class="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/60 rounded-xl">
-                    <div class="flex justify-between items-start">
+                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                    <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-semibold text-slate-200 block">Liquid Metallic / Cat-Eye Dimension</span>
-                            <span class="mono-data text-[9px] text-slate-500 mt-0.5">Hyper-reflective premium fluid</span>
+                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Liquid Metallic / Cat-Eye Radiance</span>
+                            <span class="heading-classic italic text-[11px] text-neutral-400">Reflective fine-metal layer treatment</span>
                         </div>
-                        <span id="art2Display" class="mono-data text-xs font-bold text-pink-400 bg-pink-950/40 px-2.5 py-0.5 rounded border border-pink-900/30">0</span>
+                        <span id="art2Display" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
                     </div>
-                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full h-1 bg-neutral-800 appearance-none cursor-pointer accent-cyan-400 rounded-full" oninput="calculateTotal()">
+                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
                 </div>
             </div>
 
-            <!-- SECTION 5: APPALACHIAN HARDWARE -->
+            <!-- SECTION 5: EMBELLISHMENTS -->
             <div class="space-y-4">
-                <div class="flex items-center gap-2.5">
-                    <span class="mono-data text-xs text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/40">05</span>
-                    <h2 class="heading-cyber font-bold text-sm tracking-wider uppercase text-white">Hardware & Embellishments</h2>
+                <div class="flex items-baseline gap-3 border-b border-neutral-200 pb-2">
+                    <span class="heading-classic text-2xl italic text-neutral-400">V.</span>
+                    <h2 class="heading-classic font-normal text-xl tracking-wide uppercase">Atelier Embellishments</h2>
                 </div>
 
-                <div class="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/60 rounded-xl">
-                    <div class="flex justify-between items-start">
+                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                    <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-semibold text-slate-200 block">3D Chrome Sculpting / Punk Charms</span>
-                            <span class="mono-data text-[9px] text-slate-500 mt-0.5">Heavy industrial studio hardware</span>
+                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">3D Relic Sculpting / Neo-Classic Charms</span>
+                            <span class="heading-classic italic text-[11px] text-neutral-400">Structural luxury miniature hardware</span>
                         </div>
-                        <span id="charmDisplay" class="mono-data text-xs font-bold text-cyan-400 bg-cyan-950/40 px-2.5 py-0.5 rounded border border-cyan-900/30">0</span>
+                        <span id="charmDisplay" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
                     </div>
-                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full h-1 bg-neutral-800 appearance-none cursor-pointer accent-pink-500 rounded-full" oninput="calculateTotal()">
+                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
                 </div>
 
-                <div class="space-y-3 bg-neutral-950/40 p-4 border border-neutral-800/60 rounded-xl">
-                    <div class="flex justify-between items-start">
+                <div class="space-y-2 bg-white p-4 border border-neutral-150">
+                    <div class="flex justify-between items-center mb-1">
                         <div>
-                            <span class="text-xs font-semibold text-slate-200 block">Raw Crystals / Cyberpunk Studs</span>
-                            <span class="mono-data text-[9px] text-slate-500 mt-0.5">Asymmetric structural accents</span>
+                            <span class="text-xs font-medium tracking-wide text-neutral-900 block">Raw Crystals / Mineral Studs</span>
+                            <span class="heading-classic italic text-[11px] text-neutral-400">Asymmetric glass element balancing</span>
                         </div>
-                        <span id="stoneDisplay" class="mono-data text-xs font-bold text-cyan-400 bg-cyan-950/40 px-2.5 py-0.5 rounded border border-cyan-900/30">0</span>
+                        <span id="stoneDisplay" class="heading-classic text-lg italic text-neutral-900 border-b border-neutral-900 px-1">0</span>
                     </div>
-                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full h-1 bg-neutral-800 appearance-none cursor-pointer accent-pink-500 rounded-full" oninput="calculateTotal()">
+                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full h-[2px] bg-neutral-200 appearance-none cursor-pointer rounded-none" oninput="calculateTotal()">
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- FLOATING CHECKOUT PANEL -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#0d0d12] via-[#0d0d12]/90 to-transparent z-50">
-        <div class="max-w-md mx-auto bg-neutral-900/90 border border-neutral-800 backdrop-blur-lg p-4 rounded-2xl flex items-center justify-between gap-4 shadow-2xl">
+    <!-- FLOATING CHECKOUT HUD (Midnight Navy Palette Contrast) -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#080f1d] via-[#080f1d]/90 to-transparent z-50">
+        <div class="max-w-md mx-auto bg-[#080f1d] border border-slate-800 text-white rounded-none p-5 shadow-2xl flex items-center justify-between gap-4">
             <div>
-                <p class="mono-data text-[9px] tracking-widest text-slate-500 font-bold uppercase">// TOTAL VALUATION</p>
-                <p id="floatingPriceDisplay" class="heading-cyber text-2xl font-black text-white tracking-tight">Rp 75.000</p>
+                <p class="mono-data text-[9px] tracking-[0.2em] text-[#eadecc] uppercase">// ATELIER VALUE</p>
+                <p id="floatingPriceDisplay" class="heading-classic text-2xl font-normal text-[#fcfbfa] tracking-wide">Rp 75.000</p>
             </div>
-            <button type="button" onclick="sendToWhatsApp()" class="bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-neutral-950 font-extrabold px-6 py-3.5 rounded-xl text-xs tracking-wider uppercase transition-all duration-200 hover:opacity-90 active:scale-95 heading-cyber shadow-lg shadow-fuchsia-500/10">
-                DISPATCH SPEC
+            <button type="button" onclick="sendToWhatsApp()" class="bg-[#fcfbfa] hover:bg-neutral-100 text-neutral-950 font-medium px-6 py-3.5 rounded-none text-xs tracking-[0.15em] uppercase transition-colors heading-classic">
+                Submit Order
             </button>
         </div>
     </div>
 
     <!-- Scripting Engine Logic -->
     <script>
-        // STUDIO CONTACT DATA NODE
-        const WHATSAPP_NUMBER = "6281331118565"; 
+        const WHATSAPP_NUMBER = "6281234567890"; 
         let hasImage = false;
 
         function handleFileChange(input) {
             const statusText = document.getElementById('uploadStatus');
             if(input.files && input.files[0]) {
-                statusText.innerText = "✓ ARTWORK INDEXED";
-                statusText.classList.remove('text-slate-300');
-                statusText.classList.add('text-cyan-400');
+                statusText.innerText = "✓ Blueprint Recorded";
+                statusText.classList.remove('text-neutral-800');
+                statusText.classList.add('text-emerald-700', 'font-medium');
                 hasImage = true;
             }
         }
@@ -285,18 +288,18 @@
             const accCharm = document.getElementById('accCharm').value;
             const accStone = document.getElementById('accStone').value;
             const total = document.getElementById('floatingPriceDisplay').innerText;
-            const fotoStatus = hasImage ? "Uploaded (Awaiting transmission)" : "None";
+            const fotoStatus = hasImage ? "Uploaded & Awaiting Rendering" : "None";
 
-            const textMessage = `[ STUDIO CUSTOM SPECS ]\n\n` +
-                                `• Length Profiling: ${length}\n` +
-                                `• Silhouette Shape: ${shape}\n` +
-                                `• Precision Linework: ${artLine} Units\n` +
-                                `• Metallic/CatEye Fluid: ${artChrome} Units\n` +
-                                `• Industrial Hardware (3D/Charm): ${accCharm} Pcs\n` +
-                                `• Accent Hardware (Gems): ${accStone} Pcs\n` +
-                                `• Visual Blueprint: ${fotoStatus}\n\n` +
-                                `*VALUATION:* ${total}\n\n` +
-                                `Design Pipeline initialized. Awaiting confirmation.`;
+            const textMessage = `[ EFFORTLESS ATELIER — SPECIFICATION ORDER ]\n\n` +
+                                `• Length Couture: ${length}\n` +
+                                `• Silhouette Form: ${shape}\n` +
+                                `• Fine Line Artistry: ${artLine} Units\n` +
+                                `• Liquid Metal Layer: ${artChrome} Units\n` +
+                                `• Atelier Relic/Charms: ${accCharm} Pcs\n` +
+                                `• Accent Crystals: ${accStone} Pcs\n` +
+                                `• Technical Rendering: ${fotoStatus}\n\n` +
+                                `*ESTIMATED ATELIER VALUE:* ${total}\n\n` +
+                                `Bespoke configuration initialized via Effortless Collection.`;
 
             const encodedMessage = encodeURIComponent(textMessage);
             const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
