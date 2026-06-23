@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Effortless Collection — Custom Press-On Boudoir</title>
+    <title>Effortless Collection — Glowing Coquette Atelier</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts Multi-Mix (Playfair Display & Italianno untuk keanggunan Rococo, Montserrat untuk teks bersih) -->
+    <!-- Google Fonts Multi-Mix -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #D7CCAE; /* #D7CCAE - Warm Biscuit Ivory dari download (3).jpg */
-            color: #0d1b2a; /* Midnight Navy text untuk keterbacaan premium */
+            background-color: #FAF6F0; /* Jauh lebih terang: Ivory Linen Base */
+            color: #2D2522; /* Teks cokelat gelap lembut (bukan hitam pekat/gelap redup) */
         }
         .heading-rococo {
             font-family: 'Playfair Display', serif;
@@ -27,148 +27,212 @@
             font-family: 'Space Mono', monospace;
         }
         
-        /* Rococo Boudoir Box Aesthetic */
+        /* Bright & Fresh Coquette Card inspired by download (3).jpg */
         .rococo-card {
-            background-color: #CFB4AB; /* #CFB4AB - Dusty Rose Creme */
-            border: 2px solid #C0AF99; /* #C0AF99 - Antique Gold */
-            box-shadow: 0 15px 35px rgba(181, 120, 115, 0.15);
+            background-color: #FCF8F5; /* Sangat terang & clean dengan tone rose-cream lembut */
+            border: 2px solid #E6DDD0;
+            box-shadow: 0 20px 40px rgba(181, 120, 115, 0.06);
         }
 
-        /* Custom range slider styling mimicking vintage ribbons */
+        /* Option Item Pop Effect */
+        .visual-option-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: brightness(0.92); /* Sedikit lebih redup saat tidak dipilih */
+            opacity: 0.75;
+        }
+        
+        /* Ketika checkbox/radio di dalamnya aktif, class ini akan ditempel via JavaScript */
+        .visual-option-card.is-active {
+            filter: brightness(1.05) saturate(1.05); /* Pop & jauh lebih cerah/terang! */
+            opacity: 1;
+            border-color: #B57873; /* Aksen Vintage Mauve */
+            background-color: #FFF;
+            box-shadow: 0 8px 20px rgba(181, 120, 115, 0.12);
+            transform: translateY(-2px);
+        }
+
+        /* Custom range slider mimicking vintage ribbons */
         input[type="range"] {
             -webkit-appearance: none;
             appearance: none;
-            background: #C0AF99;
-            height: 3px;
+            background: #E6DDD0;
+            height: 4px;
+            border-radius: 2px;
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 14px;
-            height: 14px;
-            background: #B57873; /* #B57873 - Vintage Mauve */
+            width: 16px;
+            height: 16px;
+            background: #B57873;
             border: 2px solid #ffffff;
             border-radius: 50%;
             cursor: pointer;
-            transition: transform 0.1s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body class="antialiased selection:bg-[#B57873] selection:text-white">
 
-    <!-- Header Section (Inspired by Palace of Versailles look lookbook) -->
-    <header class="w-full text-center pt-20 pb-12 px-4 max-w-xl mx-auto">
+    <!-- Header Section (Bright & Airy Palace Look) -->
+    <header class="w-full text-center pt-16 pb-10 px-4 max-w-xl mx-auto">
         <div class="mono-data inline-flex items-center gap-2 text-[#B57873] text-[10px] font-bold tracking-[0.3em] uppercase mb-2">
             ✨ LET THEM WEAR ART ✨
         </div>
-        <h1 class="heading-rococo text-5xl font-normal text-[#0d1b2a] leading-none tracking-wide">
+        <h1 class="heading-rococo text-5xl font-normal text-[#2D2522] leading-none tracking-wide">
             Effortless
         </h1>
-        <div class="script-coquette text-4xl text-[#B57873] -mt-1 mb-3">Collection</div>
-        <div class="w-16 h-[1px] bg(#C0AF99) mx-auto my-3" style="background-color: #C0AF99;"></div>
-        <p class="text-stone-600 text-[11px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed">
+        <div class="script-coquette text-4xl text-[#B57873] -mt-1 mb-2">Collection</div>
+        <div class="w-12 h-[1px] bg-[#C0AF99] mx-auto my-3"></div>
+        <p class="text-stone-500 text-[10px] max-w-xs mx-auto font-medium tracking-widest uppercase leading-relaxed">
             Bespoke Custom Coquette Press-On Lab
         </p>
     </header>
 
     <!-- Main Container -->
     <main class="max-w-xl mx-auto px-4 pb-44">
-        <!-- Rococo Card Wrapper -->
-        <div class="rococo-card p-8 md:p-10 space-y-10 rounded-3xl">
+        <div class="rococo-card p-6 md:p-8 space-y-10 rounded-3xl">
             
             <!-- SECTION 1: VISUAL BLUEPRINT -->
             <div class="space-y-4">
-                <div class="flex items-baseline justify-between border-b border-[#C0AF99]/50 pb-2">
+                <div class="flex items-baseline justify-between border-b border-stone-200 pb-2">
                     <div class="flex items-baseline gap-2">
                         <span class="heading-rococo text-xl italic text-[#B57873]">I.</span>
-                        <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#0d1b2a]">Visual Blueprint</h2>
+                        <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Visual Blueprint</h2>
                     </div>
                     <span class="mono-data text-[9px] text-[#B57873] font-bold tracking-wider">OPTIONAL</span>
                 </div>
                 <div class="flex items-center justify-center w-full">
-                    <label class="flex flex-col items-center justify-center w-full h-32 border border-dashed border-[#C0AF99] bg-[#D7CCAE]/30 hover:bg-[#D7CCAE]/50 transition-colors cursor-pointer rounded-2xl">
+                    <label class="flex flex-col items-center justify-center w-full h-28 border border-dashed border-[#C0AF99] bg-white hover:bg-[#CFB4AB]/10 transition-colors cursor-pointer rounded-2xl">
                         <div class="flex flex-col items-center justify-center text-center px-4">
-                            <!-- Delicate Ribbon/Aesthetic Icon View -->
-                            <svg class="w-5 h-5 mb-2 text-[#B57873]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mb-1.5 text-[#B57873]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
-                            <p class="heading-rococo text-xs italic text-stone-800" id="uploadStatus">Attach custom design portrait or inspirations</p>
+                            <p class="heading-rococo text-xs italic text-stone-700" id="uploadStatus">Attach custom design portrait or inspirations</p>
                         </div>
                         <input type="file" id="nailPhoto" accept="image/*" class="hidden" onchange="handleFileChange(this)">
                     </label>
                 </div>
             </div>
 
-            <!-- SECTION 2: LENGTH COUTURE -->
+            <!-- SECTION 2: LENGTH COUTURE (With Bright Example Pics) -->
             <div class="space-y-4">
-                <div class="flex items-baseline gap-2 border-b border-[#C0AF99]/50 pb-2">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">II.</span>
-                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#0d1b2a]">Length Tier</h2>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Length Tier</h2>
                 </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <label class="relative flex flex-col p-4 bg-[#D7CCAE]/20 border border-[#C0AF99]/60 cursor-pointer hover:border-[#B57873] transition rounded-2xl has-[:checked]:border-[#B57873] has-[:checked]:bg-white/70">
-                        <input type="radio" name="length" value="Short" checked class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-rococo font-normal text-base text-[#0d1b2a]">Coquette Short</span>
-                        <span class="mono-data text-[9px] text-[#B57873] font-bold mt-1">Base Spec</span>
+                <div class="grid grid-cols-2 gap-3" id="lengthGroup">
+                    <!-- Short -->
+                    <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
+                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=300&q=80" alt="Short Nails" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1 py-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Coquette Short</span>
+                            <span class="mono-data text-[9px] text-[#B57873] font-bold">Base Spec</span>
+                        </div>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-[#D7CCAE]/20 border border-[#C0AF99]/60 cursor-pointer hover:border-[#B57873] transition rounded-2xl has-[:checked]:border-[#B57873] has-[:checked]:bg-white/70">
-                        <input type="radio" name="length" value="Medium" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-rococo font-normal text-base text-[#0d1b2a]">Court Medium</span>
-                        <span class="mono-data text-[9px] text-stone-700 font-bold mt-1">+10k IDR</span>
+                    <!-- Medium -->
+                    <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
+                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
+                            <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=300&q=80" alt="Medium Nails" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1 py-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Court Medium</span>
+                            <span class="mono-data text-[9px] text-stone-500 font-bold">+10k IDR</span>
+                        </div>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-[#D7CCAE]/20 border border-[#C0AF99]/60 cursor-pointer hover:border-[#B57873] transition rounded-2xl has-[:checked]:border-[#B57873] has-[:checked]:bg-white/70">
-                        <input type="radio" name="length" value="Long" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-rococo font-normal text-base text-[#0d1b2a]">Royal Long</span>
-                        <span class="mono-data text-[9px] text-stone-700 font-bold mt-1">+20k IDR</span>
+                    <!-- Long -->
+                    <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
+                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
+                            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=300&q=80" alt="Long Nails" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1 py-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Royal Long</span>
+                            <span class="mono-data text-[9px] text-stone-500 font-bold">+20k IDR</span>
+                        </div>
                     </label>
-                    <label class="relative flex flex-col p-4 bg-[#D7CCAE]/20 border border-[#C0AF99]/60 cursor-pointer hover:border-[#B57873] transition rounded-2xl has-[:checked]:border-[#B57873] has-[:checked]:bg-white/70">
-                        <input type="radio" name="length" value="XL" class="sr-only" onchange="calculateTotal()">
-                        <span class="heading-rococo font-normal text-base text-[#0d1b2a]">Baroque XL</span>
-                        <span class="mono-data text-[9px] text-stone-700 font-bold mt-1">+30k IDR</span>
+                    <!-- XL -->
+                    <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
+                        <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
+                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
+                            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=300&q=80" alt="XL Nails" class="w-full h-full object-cover">
+                        </div>
+                        <div class="px-1 py-1">
+                            <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Baroque XL</span>
+                            <span class="mono-data text-[9px] text-stone-500 font-bold">+30k IDR</span>
+                        </div>
                     </label>
                 </div>
             </div>
 
-            <!-- SECTION 3: SILHOUETTE PROFILE -->
+            <!-- SECTION 3: SILHOUETTE PROFILE (With Bright Example Pics) -->
             <div class="space-y-6">
-                <div class="flex items-baseline gap-2 border-b border-[#C0AF99]/50 pb-2">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">III.</span>
-                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#0d1b2a]">Silhouette Profiles</h2>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Silhouette Profiles</h2>
                 </div>
                 
-                <div class="space-y-5">
+                <div class="space-y-6" id="shapeGroup">
                     <div>
-                        <p class="mono-data text-[9px] text-stone-600 font-bold uppercase tracking-widest mb-2.5">// Classic Shapes</p>
+                        <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Classic Shapes</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Square</span>
+                            <!-- Square -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Square Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Square</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Oval</span>
+                            <!-- Oval -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1610992015732-2449b76344cc?auto=format&fit=crop&w=200&q=80" alt="Oval Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Oval</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Almond</span>
+                            <!-- Almond -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=200&q=80" alt="Almond Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Almond</span>
                             </label>
                         </div>
                     </div>
 
                     <div>
-                        <p class="mono-data text-[9px] text-stone-600 font-bold uppercase tracking-widest mb-2.5">// Avant-Garde Shapes (+10k)</p>
+                        <p class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-widest mb-3">// Avant-Garde Shapes (+10k)</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Coffin</span>
+                            <!-- Coffin -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=200&q=80" alt="Coffin Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Coffin</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Stiletto</span>
+                            <!-- Stiletto -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=200&q=80" alt="Stiletto Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Stiletto</span>
                             </label>
-                            <label class="relative flex flex-col p-3 text-center bg-white/40 border border-[#C0AF99]/50 cursor-pointer hover:border-[#B57873] transition rounded-xl has-[:checked]:border-[#B57873] has-[:checked]:bg-[#B2BABC]/30">
-                                <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="calculateTotal()">
-                                <span class="font-medium text-xs text-stone-800">Asymmetric</span>
+                            <!-- Asymmetric -->
+                            <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
+                                <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="syncVisualOptions()">
+                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=200&q=80" alt="Custom Shape" class="w-full h-full object-cover">
+                                </div>
+                                <span class="font-semibold text-xs text-stone-800">Asymmetric</span>
                             </label>
                         </div>
                     </div>
@@ -177,75 +241,71 @@
 
             <!-- SECTION 4: ART ELEVATION -->
             <div class="space-y-4">
-                <div class="flex items-baseline gap-2 border-b border-[#C0AF99]/50 pb-2">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">IV.</span>
-                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#0d1b2a]">Delicate Hand-Paint</h2>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Delicate Hand-Paint</h2>
                 </div>
-
-                <div class="space-y-2 py-1">
+                <div class="space-y-3 py-1">
                     <div class="flex justify-between items-center mb-1">
                         <div>
                             <span class="text-xs font-semibold text-stone-800 block">Fine Line / Pearl Bows / Aura Blush</span>
                             <span class="heading-rococo italic text-xs text-[#B57873]">Intricate micro-detailed vintage elements</span>
                         </div>
-                        <span id="art1Display" class="heading-rococo text-xl font-semibold text-[#B57873]">0</span>
+                        <span id="art1Display" class="heading-rococo text-xl font-bold text-[#B57873]">0</span>
                     </div>
-                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full rounded-lg" oninput="calculateTotal()">
+                    <input type="range" id="artLine" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
-
-                <div class="space-y-2 py-1">
+                <div class="space-y-3 py-1">
                     <div class="flex justify-between items-center mb-1">
                         <div>
                             <span class="text-xs font-semibold text-stone-800 block">Velvet Glaze / Liquid Pearl Dimension</span>
                             <span class="heading-rococo italic text-xs text-[#B57873]">Soft hyper-shimmer oyster treatments</span>
                         </div>
-                        <span id="art2Display" class="heading-rococo text-xl font-semibold text-[#B57873]">0</span>
+                        <span id="art2Display" class="heading-rococo text-xl font-bold text-[#B57873]">0</span>
                     </div>
-                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full rounded-lg" oninput="calculateTotal()">
+                    <input type="range" id="artChrome" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
             </div>
 
             <!-- SECTION 5: EMBELLISHMENTS -->
             <div class="space-y-4">
-                <div class="flex items-baseline gap-2 border-b border-[#C0AF99]/50 pb-2">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
-                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#0d1b2a]">Palace Jewelry</h2>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Palace Jewelry</h2>
                 </div>
-
-                <div class="space-y-2 py-1">
+                <div class="space-y-3 py-1">
                     <div class="flex justify-between items-center mb-1">
                         <div>
                             <span class="text-xs font-semibold text-stone-800 block">3D Sculpted Roses / Baroque Cameo Charms</span>
                             <span class="heading-rococo italic text-xs text-[#B57873]">Delicate ornamental structural art pieces</span>
                         </div>
-                        <span id="charmDisplay" class="heading-rococo text-xl font-semibold text-[#B57873]">0</span>
+                        <span id="charmDisplay" class="heading-rococo text-xl font-bold text-[#B57873]">0</span>
                     </div>
-                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full rounded-lg" oninput="calculateTotal()">
+                    <input type="range" id="accCharm" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
-
-                <div class="space-y-2 py-1">
+                <div class="space-y-3 py-1">
                     <div class="flex justify-between items-center mb-1">
                         <div>
                             <span class="text-xs font-semibold text-stone-800 block">Freshwater Pearls / Vintage Rhinestones</span>
                             <span class="heading-rococo italic text-xs text-[#B57873]">Elegant clustering of precious glass accents</span>
                         </div>
-                        <span id="stoneDisplay" class="heading-rococo text-xl font-semibold text-[#B57873]">0</span>
+                        <span id="stoneDisplay" class="heading-rococo text-xl font-bold text-[#B57873]">0</span>
                     </div>
-                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full rounded-lg" oninput="calculateTotal()">
+                    <input type="range" id="accStone" min="0" max="10" value="0" class="w-full" oninput="calculateTotal()">
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- FLOATING CHECKOUT HUD (#B2BABC Powder Blue Mist used for the CTA bar contrast) -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#D7CCAE] via-[#D7CCAE]/90 to-transparent z-50">
-        <div class="max-w-md mx-auto bg-[#B2BABC] border border-white/60 text-[#0d1b2a] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
+    <!-- FLOATING CHECKOUT HUD (Menggunakan Powder Blue #B2BABC dengan paduan teks kontras cerah) -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] via-[#FAF6F0]/90 to-transparent z-50">
+        <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
             <div>
-                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-600 font-bold uppercase">// BOUDOIR PRICE</p>
-                <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-[#0d1b2a] tracking-wide">Rp 75.000</p>
+                <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// BOUDOIR VALUE</p>
+                <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 75.000</p>
             </div>
-            <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#b57873]/80 text-white font-normal px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo font-medium rounded-xl shadow-md">
+            <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo rounded-xl shadow-md">
                 Secure Spec
             </button>
         </div>
@@ -266,17 +326,36 @@
             }
         }
 
+        // Fungsi khusus untuk scan semua radio item, mencerahkan yang dipilih & meredupkan sisanya
+        function syncVisualOptions() {
+            const containerIds = ['lengthGroup', 'shapeGroup'];
+            
+            containerIds.forEach(id => {
+                const cards = document.getElementById(id).querySelectorAll('.visual-option-card');
+                cards.forEach(card => {
+                    const input = card.querySelector('input[type="radio"]');
+                    if (input && input.checked) {
+                        card.classList.add('is-active');
+                    } else {
+                        card.classList.remove('is-active');
+                    }
+                });
+            });
+
+            calculateTotal();
+        }
+
         function calculateTotal() {
             const basePrice = 75000;
             
-            // Length Spec
+            // Length Spec Price Calc
             const lengthElement = document.querySelector('input[name="length"]:checked').value;
             let lengthPrice = 0;
             if (lengthElement === "Medium") lengthPrice = 10000;
             else if (lengthElement === "Long") lengthPrice = 20000;
             else if (lengthElement === "XL") lengthPrice = 30000;
             
-            // Silhouette Profiling
+            // Silhouette Profiling Price Calc
             const shapeElement = document.querySelector('input[name="shape"]:checked').value;
             let shapePrice = 0;
             if (shapeElement.startsWith("Premium") || shapeElement === "Custom Shape") {
@@ -328,7 +407,8 @@
             window.open(waUrl, '_blank');
         }
 
-        calculateTotal();
+        // Inisialisasi status kecerahan visual saat pertama kali dimuat
+        syncVisualOptions();
     </script>
 </body>
 </html>
