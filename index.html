@@ -9,7 +9,7 @@
     <!-- Google Fonts Multi-Mix -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;1,400&family=Space+Mono&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -109,8 +109,26 @@
         </p>
     </header>
 
-    <main class="max-w-xl mx-auto px-4 pb-44">
+    <main class="max-w-xl mx-auto px-4 pb-52">
         <div class="rococo-card p-6 md:p-8 space-y-10 rounded-3xl">
+
+            <!-- SECTION 0: CLIENT IDENTITY -->
+            <div class="space-y-4">
+                <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
+                    <span class="heading-rococo text-xl italic text-[#B57873]">0.</span>
+                    <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Client Identity</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-wider">Your Name *</label>
+                        <input type="text" id="clientName" placeholder="Nama lengkap / panggilan" class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:outline-none focus:border-[#B57873] text-[#2D2522]" required>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="mono-data text-[9px] text-stone-500 font-bold uppercase tracking-wider">Instagram / TikTok Username</label>
+                        <input type="text" id="clientSocial" placeholder="@username (Bisa dikosongkan)" class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:outline-none focus:border-[#B57873] text-[#2D2522]">
+                    </div>
+                </div>
+            </div>
 
             <!-- SECTION 1: LENGTH COUTURE -->
             <div class="space-y-4">
@@ -360,21 +378,29 @@
         </div>
     </main>
 
-    <!-- FLOATING CHECKOUT HUD -->
+    <!-- FLOATING CHECKOUT HUD (DUAL CHANNEL SYSTEM) -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] via-[#FAF6F0]/90 to-transparent z-50">
-        <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
-            <div>
+        <div class="max-w-xl mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-3xl">
+            <div class="text-center sm:text-left">
                 <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// BOUDOIR VALUE</p>
                 <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 75.000</p>
             </div>
-            <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo rounded-xl shadow-md">
-                Secure Spec
-            </button>
+            <div class="grid grid-cols-2 gap-2 w-full sm:w-auto">
+                <!-- Channel WA -->
+                <button type="button" onclick="checkout('whatsapp')" class="bg-[#25D366] hover:bg-[#20ba56] text-white font-medium px-4 py-3.5 text-[11px] tracking-[0.1em] uppercase transition-colors heading-rococo rounded-xl shadow-md text-center">
+                    Order via WA
+                </button>
+                <!-- Channel DM Instagram -->
+                <button type="button" onclick="checkout('instagram')" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-4 py-3.5 text-[11px] tracking-[0.1em] uppercase transition-colors heading-rococo rounded-xl shadow-md text-center">
+                    Copy for DM
+                </button>
+            </div>
         </div>
     </div>
 
     <script>
         const WHATSAPP_NUMBER = "6281331118565"; 
+        const INSTAGRAM_USERNAME = "username_kamu"; // GANTI DENGAN USERNAME INSTAGRAM TOKOMU
 
         function toggleCustomSizeInput() {
             const selectedSize = document.querySelector('input[name="nailSize"]:checked').value;
@@ -402,7 +428,6 @@
                 });
             });
 
-            // Live engine: Update preview heights inside Shape Profiles selection based on chosen Length Tier
             const currentLength = document.querySelector('input[name="length"]:checked').value;
             let targetHeight = "50px"; 
             
@@ -448,12 +473,22 @@
             document.getElementById('floatingPriceDisplay').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
         }
 
-        function sendToWhatsApp() {
+        function buildMessage() {
+            const nameInput = document.getElementById('clientName').value.trim();
+            const socialInput = document.getElementById('clientSocial').value.trim();
+
+            if (!nameInput) {
+                alert("Silakan isi nama kamu terlebih dahulu di bagian atas ya! ✨");
+                document.getElementById('clientName').focus();
+                return null;
+            }
+
+            const clientName = nameInput;
+            const clientSocial = socialInput ? socialInput : "Tidak diisi";
             const length = document.querySelector('input[name="length"]:checked').value;
             const shape = document.querySelector('input[name="shape"]:checked').value;
             const glue = document.querySelector('input[name="glue"]:checked').value;
             
-            // Get Nail Size Data
             const baseSize = document.querySelector('input[name="nailSize"]:checked').value;
             let finalSize = baseSize;
             if (baseSize === "Custom") {
@@ -467,23 +502,43 @@
             const accStone = document.getElementById('accStone').value;
             const total = document.getElementById('floatingPriceDisplay').innerText;
 
-            const textMessage = `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
-                                `• Length Model: ${length}\n` +
-                                `• Silhouette Contour: ${shape}\n` +
-                                `• Nail Size: ${finalSize}\n` +
-                                `• Nail Adhesive: ${glue} (Free)\n` +
-                                `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
-                                `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
-                                `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
-                                `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n\n` +
-                                `*ESTIMATED VALUATION:* ${total}\n\n` +
-                                `Bespoke royal alignment initiated via Effortless Collection.\n\n` +
-                                `📌 *Catatan:* Jika ada gambar/inspo referensi kustom, silakan dikirim setelah teks ini ya! ✨`;
+            return `[ EFFORTLESS BOUDOIR — COQUETTE ORDER ]\n\n` +
+                   `👤 CLIENT INFO:\n` +
+                   `• Name: ${clientName}\n` +
+                   `• Instagram/TikTok: ${clientSocial}\n\n` +
+                   `💅 SPECIFICATIONS:\n` +
+                   `• Length Model: ${length}\n` +
+                   `• Silhouette Contour: ${shape}\n` +
+                   `• Nail Size: ${finalSize}\n` +
+                   `• Nail Adhesive: ${glue} (Free)\n` +
+                   `• Pearl Bows/Fine Art: ${artLine} Nails\n` +
+                   `• Velvet Glaze/Pearl Liquid: ${artChrome} Nails\n` +
+                   `• 3D Roses/Palace Charms: ${accCharm} Pcs\n` +
+                   `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n\n` +
+                   `*ESTIMATED VALUATION:* ${total}\n\n` +
+                   `Bespoke royal alignment initiated via Effortless Collection.\n\n` +
+                   `📌 Catatan: Jika ada gambar/inspo referensi kustom, silakan dikirim setelah teks ini ya! ✨`;
+        }
 
-            const encodedMessage = encodeURIComponent(textMessage);
-            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-            
-            window.open(waUrl, '_blank');
+        function checkout(channel) {
+            const textMessage = buildMessage();
+            if (!textMessage) return; // name validation failed
+
+            if (channel === 'whatsapp') {
+                const encodedMessage = encodeURIComponent(textMessage);
+                const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+                window.open(waUrl, '_blank');
+            } 
+            else if (channel === 'instagram') {
+                // Clipboard copy engine
+                navigator.clipboard.writeText(textMessage).then(() => {
+                    alert("✨ Detail pesanan sudah disalin ke papan klip kuku kamu! Kamu akan diarahkan ke Instagram, silakan langsung PASTE/TEMPEL pesanannya di DM ya. ✨");
+                    const igUrl = `https://instagram.com/${INSTAGRAM_USERNAME}`;
+                    window.open(igUrl, '_blank');
+                }).catch(err => {
+                    alert("Gagal menyalin otomatis. Silakan screenshot atau coba lagi.");
+                });
+            }
         }
 
         syncVisualOptions();
