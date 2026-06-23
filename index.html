@@ -14,8 +14,8 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #FAF6F0; /* Jauh lebih terang: Ivory Linen Base */
-            color: #2D2522; /* Teks cokelat gelap lembut (bukan hitam pekat/gelap redup) */
+            background-color: #FAF6F0; /* Bright Ivory Linen Base */
+            color: #2D2522; 
         }
         .heading-rococo {
             font-family: 'Playfair Display', serif;
@@ -27,9 +27,8 @@
             font-family: 'Space Mono', monospace;
         }
         
-        /* Bright & Fresh Coquette Card inspired by download (3).jpg */
         .rococo-card {
-            background-color: #FCF8F5; /* Sangat terang & clean dengan tone rose-cream lembut */
+            background-color: #FCF8F5; 
             border: 2px solid #E6DDD0;
             box-shadow: 0 20px 40px rgba(181, 120, 115, 0.06);
         }
@@ -37,21 +36,38 @@
         /* Option Item Pop Effect */
         .visual-option-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            filter: brightness(0.92); /* Sedikit lebih redup saat tidak dipilih */
-            opacity: 0.75;
+            filter: brightness(0.92); 
+            opacity: 0.7;
         }
         
-        /* Ketika checkbox/radio di dalamnya aktif, class ini akan ditempel via JavaScript */
         .visual-option-card.is-active {
-            filter: brightness(1.05) saturate(1.05); /* Pop & jauh lebih cerah/terang! */
+            filter: brightness(1.08) saturate(1.05); /* Jauh lebih terang dan pop out! */
             opacity: 1;
-            border-color: #B57873; /* Aksen Vintage Mauve */
+            border-color: #B57873; 
             background-color: #FFF;
-            box-shadow: 0 8px 20px rgba(181, 120, 115, 0.12);
-            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(181, 120, 115, 0.15);
+            transform: translateY(-3px);
         }
 
-        /* Custom range slider mimicking vintage ribbons */
+        /* CSS Cropping Windows menggunakan file tunggal */
+        .nail-crop {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Penyesuaian koordinat fokus berdasarkan gambar referensi */
+        .crop-short    { object-position: 12% 5%; transform: scale(1.6); }
+        .crop-medium   { object-position: 38% 5%; transform: scale(1.6); }
+        .crop-long     { object-position: 63% 5%; transform: scale(1.5); }
+        .crop-xl       { object-position: 63% 5%; transform: scale(1.8); } /* Fokus ke XL Square */
+        
+        .crop-square   { object-position: 38% 5%; transform: scale(1.6); }
+        .crop-oval     { object-position: 88% 5%; transform: scale(1.6); }
+        .crop-almond   { object-position: 15% 95%; transform: scale(1.6); }
+        .crop-coffin   { object-position: 13% 50%; transform: scale(1.6); }
+        .crop-stiletto { object-position: 50% 95%; transform: scale(1.6); }
+        .crop-custom   { object-position: 50% 50%; transform: scale(1.6); } /* Fokus ke Ballerina */
+
         input[type="range"] {
             -webkit-appearance: none;
             appearance: none;
@@ -68,13 +84,11 @@
             border: 2px solid #ffffff;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body class="antialiased selection:bg-[#B57873] selection:text-white">
 
-    <!-- Header Section (Bright & Airy Palace Look) -->
     <header class="w-full text-center pt-16 pb-10 px-4 max-w-xl mx-auto">
         <div class="mono-data inline-flex items-center gap-2 text-[#B57873] text-[10px] font-bold tracking-[0.3em] uppercase mb-2">
             ✨ LET THEM WEAR ART ✨
@@ -89,7 +103,6 @@
         </p>
     </header>
 
-    <!-- Main Container -->
     <main class="max-w-xl mx-auto px-4 pb-44">
         <div class="rococo-card p-6 md:p-8 space-y-10 rounded-3xl">
             
@@ -115,7 +128,7 @@
                 </div>
             </div>
 
-            <!-- SECTION 2: LENGTH COUTURE (With Bright Example Pics) -->
+            <!-- SECTION 2: LENGTH COUTURE -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">II.</span>
@@ -125,8 +138,8 @@
                     <!-- Short -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Short" checked class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
-                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=300&q=80" alt="Short Nails" class="w-full h-full object-cover">
+                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Short" class="nail-crop crop-short">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Coquette Short</span>
@@ -136,8 +149,8 @@
                     <!-- Medium -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Medium" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
-                            <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=300&q=80" alt="Medium Nails" class="w-full h-full object-cover">
+                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Medium" class="nail-crop crop-medium">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Court Medium</span>
@@ -147,8 +160,8 @@
                     <!-- Long -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="Long" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
-                            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=300&q=80" alt="Long Nails" class="w-full h-full object-cover">
+                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Long" class="nail-crop crop-long">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Royal Long</span>
@@ -158,8 +171,8 @@
                     <!-- XL -->
                     <label class="visual-option-card relative flex flex-col p-2 bg-white border border-stone-200 cursor-pointer rounded-2xl overflow-hidden">
                         <input type="radio" name="length" value="XL" class="sr-only" onchange="syncVisualOptions()">
-                        <div class="w-full h-24 bg-stone-100 rounded-xl overflow-hidden mb-2">
-                            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=300&q=80" alt="XL Nails" class="w-full h-full object-cover">
+                        <div class="w-full h-24 bg-[#EFECE7] rounded-xl overflow-hidden mb-2 relative">
+                            <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="XL" class="nail-crop crop-xl">
                         </div>
                         <div class="px-1 py-1">
                             <span class="heading-rococo font-semibold text-sm text-[#2D2522] block">Baroque XL</span>
@@ -169,7 +182,7 @@
                 </div>
             </div>
 
-            <!-- SECTION 3: SILHOUETTE PROFILE (With Bright Example Pics) -->
+            <!-- SECTION 3: SILHOUETTE PROFILE -->
             <div class="space-y-6">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">III.</span>
@@ -183,24 +196,24 @@
                             <!-- Square -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Square" checked class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Square Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Square" class="nail-crop crop-square">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Square</span>
                             </label>
                             <!-- Oval -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Oval" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1610992015732-2449b76344cc?auto=format&fit=crop&w=200&q=80" alt="Oval Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Oval" class="nail-crop crop-oval">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Oval</span>
                             </label>
                             <!-- Almond -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Basic Almond" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=200&q=80" alt="Almond Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Almond" class="nail-crop crop-almond">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Almond</span>
                             </label>
@@ -213,26 +226,26 @@
                             <!-- Coffin -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Coffin" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=200&q=80" alt="Coffin Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Coffin" class="nail-crop crop-coffin">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Coffin</span>
                             </label>
                             <!-- Stiletto -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Premium Stiletto" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=200&q=80" alt="Stiletto Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Stiletto" class="nail-crop crop-stiletto">
                                 </div>
                                 <span class="font-semibold text-xs text-stone-800">Stiletto</span>
                             </label>
-                            <!-- Asymmetric -->
+                            <!-- Ballerina/Custom -->
                             <label class="visual-option-card relative flex flex-col p-1.5 bg-white border border-stone-200 cursor-pointer rounded-xl overflow-hidden text-center">
                                 <input type="radio" name="shape" value="Custom Shape" class="sr-only" onchange="syncVisualOptions()">
-                                <div class="w-full h-16 bg-stone-100 rounded-lg overflow-hidden mb-1.5">
-                                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=200&q=80" alt="Custom Shape" class="w-full h-full object-cover">
+                                <div class="w-full h-16 bg-[#EFECE7] rounded-lg overflow-hidden mb-1.5">
+                                    <img src="Fabulous Short Coffin Nail Designs - Beautiful Dawn Designs.jpg" alt="Ballerina" class="nail-crop crop-custom">
                                 </div>
-                                <span class="font-semibold text-xs text-stone-800">Asymmetric</span>
+                                <span class="font-semibold text-xs text-stone-800">Ballerina</span>
                             </label>
                         </div>
                     </div>
@@ -298,7 +311,7 @@
         </div>
     </main>
 
-    <!-- FLOATING CHECKOUT HUD (Menggunakan Powder Blue #B2BABC dengan paduan teks kontras cerah) -->
+    <!-- FLOATING CHECKOUT HUD -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#FAF6F0] via-[#FAF6F0]/90 to-transparent z-50">
         <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
             <div>
@@ -311,7 +324,6 @@
         </div>
     </div>
 
-    <!-- Scripting Engine Logic -->
     <script>
         const WHATSAPP_NUMBER = "6281234567890"; 
         let hasImage = false;
@@ -326,7 +338,6 @@
             }
         }
 
-        // Fungsi khusus untuk scan semua radio item, mencerahkan yang dipilih & meredupkan sisanya
         function syncVisualOptions() {
             const containerIds = ['lengthGroup', 'shapeGroup'];
             
@@ -348,28 +359,24 @@
         function calculateTotal() {
             const basePrice = 75000;
             
-            // Length Spec Price Calc
             const lengthElement = document.querySelector('input[name="length"]:checked').value;
             let lengthPrice = 0;
             if (lengthElement === "Medium") lengthPrice = 10000;
             else if (lengthElement === "Long") lengthPrice = 20000;
             else if (lengthElement === "XL") lengthPrice = 30000;
             
-            // Silhouette Profiling Price Calc
             const shapeElement = document.querySelector('input[name="shape"]:checked').value;
             let shapePrice = 0;
             if (shapeElement.startsWith("Premium") || shapeElement === "Custom Shape") {
                 shapePrice = 10000;
             }
             
-            // Art Mapping Matrix
             const artLine = parseInt(document.getElementById('artLine').value);
             const artChrome = parseInt(document.getElementById('artChrome').value);
             document.getElementById('art1Display').innerText = artLine;
             document.getElementById('art2Display').innerText = artChrome;
             const totalArtPrice = (artLine + artChrome) * 5000;
             
-            // Hardware Configuration
             const accCharm = parseInt(document.getElementById('accCharm').value);
             const accStone = parseInt(document.getElementById('accStone').value);
             document.getElementById('charmDisplay').innerText = accCharm;
@@ -407,7 +414,6 @@
             window.open(waUrl, '_blank');
         }
 
-        // Inisialisasi status kecerahan visual saat pertama kali dimuat
         syncVisualOptions();
     </script>
 </body>
