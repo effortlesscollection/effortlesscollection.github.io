@@ -282,37 +282,42 @@
                 </div>
             </div>
 
-            <!-- SECTION 5: NAIL SIZING (NEW) -->
+            <!-- SECTION 5: NAIL SIZING -->
             <div class="space-y-4">
                 <div class="flex items-baseline gap-2 border-b border-stone-200 pb-2">
                     <span class="heading-rococo text-xl italic text-[#B57873]">V.</span>
                     <h2 class="heading-rococo font-normal text-base tracking-wider uppercase text-[#2D2522]">Nail Size</h2>
                 </div>
-                <div class="grid grid-cols-4 gap-2" id="sizeGroup">
-                    <label class="visual-option-card flex flex-col p-3 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
-                        <input type="radio" name="nailSize" value="Size S" checked class="sr-only" onchange="toggleCustomSizeInput()">
-                        <span class="heading-rococo text-base font-bold text-[#2D2522]">S</span>
-                        <span class="text-[9px] text-stone-500 mt-1 font-medium">Small</span>
+                <div class="grid grid-cols-5 gap-1.5" id="sizeGroup">
+                    <label class="visual-option-card flex flex-col p-2.5 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
+                        <input type="radio" name="nailSize" value="Size XS" checked class="sr-only" onchange="toggleCustomSizeInput()">
+                        <span class="heading-rococo text-sm font-bold text-[#2D2522]">XS</span>
+                        <span class="text-[8px] text-stone-500 mt-0.5 font-medium">X-Small</span>
                     </label>
-                    <label class="visual-option-card flex flex-col p-3 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
+                    <label class="visual-option-card flex flex-col p-2.5 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
+                        <input type="radio" name="nailSize" value="Size S" class="sr-only" onchange="toggleCustomSizeInput()">
+                        <span class="heading-rococo text-sm font-bold text-[#2D2522]">S</span>
+                        <span class="text-[8px] text-stone-500 mt-0.5 font-medium">Small</span>
+                    </label>
+                    <label class="visual-option-card flex flex-col p-2.5 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
                         <input type="radio" name="nailSize" value="Size M" class="sr-only" onchange="toggleCustomSizeInput()">
-                        <span class="heading-rococo text-base font-bold text-[#2D2522]">M</span>
-                        <span class="text-[9px] text-stone-500 mt-1 font-medium">Medium</span>
+                        <span class="heading-rococo text-sm font-bold text-[#2D2522]">M</span>
+                        <span class="text-[8px] text-stone-500 mt-0.5 font-medium">Medium</span>
                     </label>
-                    <label class="visual-option-card flex flex-col p-3 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
+                    <label class="visual-option-card flex flex-col p-2.5 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
                         <input type="radio" name="nailSize" value="Size L" class="sr-only" onchange="toggleCustomSizeInput()">
-                        <span class="heading-rococo text-base font-bold text-[#2D2522]">L</span>
-                        <span class="text-[9px] text-stone-500 mt-1 font-medium">Large</span>
+                        <span class="heading-rococo text-sm font-bold text-[#2D2522]">L</span>
+                        <span class="text-[8px] text-stone-500 mt-0.5 font-medium">Large</span>
                     </label>
-                    <label class="visual-option-card flex flex-col p-3 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
+                    <label class="visual-option-card flex flex-col p-2.5 bg-white border border-stone-200 cursor-pointer rounded-xl text-center">
                         <input type="radio" name="nailSize" value="Custom" class="sr-only" onchange="toggleCustomSizeInput()">
-                        <span class="heading-rococo text-base font-bold text-[#2D2522]">Custom</span>
-                        <span class="text-[9px] text-stone-500 mt-1 font-medium">Manual</span>
+                        <span class="heading-rococo text-sm font-bold text-[#2D2522]">Custom</span>
+                        <span class="text-[8px] text-stone-500 mt-0.5 font-medium">Manual</span>
                     </label>
                 </div>
                 <!-- Hidden Custom Size Input Field -->
                 <div id="customSizeWrapper" class="hidden mt-3">
-                    <input type="text" id="customSizeDetail" placeholder="Contoh: Jempol 12mm, Telunjuk 9mm..." class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:outline-none focus:border-[#B57873] text-[#2D2522]">
+                    <input type="text" id="customSizeDetail" placeholder="Contoh: Jempol 11mm, Telunjuk 8mm..." class="w-full p-3 text-xs bg-white border border-[#E6DDD0] rounded-xl focus:outline-none focus:border-[#B57873] text-[#2D2522]">
                 </div>
             </div>
 
