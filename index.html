@@ -365,7 +365,7 @@
         <div class="max-w-md mx-auto bg-[#B2BABC] border border-white text-[#2D2522] p-5 shadow-2xl flex items-center justify-between gap-4 rounded-2xl">
             <div>
                 <p class="mono-data text-[9px] tracking-[0.2em] text-stone-700 font-bold uppercase">// BOUDOIR VALUE</p>
-                <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 75.000</p>
+                <p id="floatingPriceDisplay" class="heading-rococo text-2xl font-bold text-stone-900 tracking-wide">Rp 50.000</p>
             </div>
             <button type="button" onclick="sendToWhatsApp()" class="bg-[#B57873] hover:bg-[#B57873]/90 text-white font-medium px-6 py-3.5 text-xs tracking-[0.2em] uppercase transition-colors heading-rococo rounded-xl shadow-md">
                 Secure Spec
@@ -418,7 +418,7 @@
         }
 
         function calculateTotal() {
-            const basePrice = 75000;
+            const basePrice = 50000;
             
             const lengthElement = document.querySelector('input[name="length"]:checked').value;
             let lengthPrice = 0;
@@ -478,7 +478,7 @@
                                 `• Fresh Pearls/Rhinestones: ${accStone} Pcs\n\n` +
                                 `*ESTIMATED VALUATION:* ${total}\n\n` +
                                 `Bespoke royal alignment initiated via Effortless Collection.\n\n` +
-                                `📌 *Catatan:* Jika ada gambar/inspo referensi kustom, silakan dikirim setelah teks ini ya! ✨`;
+                                `📌 *Catatan:* Gambar/inspo referensi kustom, silakan dikirim setelah teks ini ya! ✨`;
 
             const encodedMessage = encodeURIComponent(textMessage);
             const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
